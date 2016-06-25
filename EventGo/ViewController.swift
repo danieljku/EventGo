@@ -25,7 +25,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.navigationItem.hidesBackButton = true;
+        let apiURL = NSURL(string: "http://curtastic.com/eventtogo/?action=getevents")
+        
+        let request = NSURLRequest(URL: apiURL!)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ (data, response, error) in
+            
+            if error == nil {
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +49,8 @@ class ViewController: UIViewController {
             eventPageController.eventList = eventArr
         }
     }*/
+    
+
 
     
     @IBAction func createEventButton(sender: AnyObject) {
@@ -53,11 +64,11 @@ class ViewController: UIViewController {
         eventArr.append(event)
         
         
-         self.eventNameLabel.text = String(eventNameField.text!)
-         self.dateLabel.text = String(dateField.text!)
-         self.locationLabel.text = String(locationField.text!)
-         self.costLabel.text = String(costField.text!)
-         self.descriptionTextView.text = String(eventDescriptionField.text!)
+        self.eventNameLabel.text = String(eventNameField.text!)
+        self.dateLabel.text = String(dateField.text!)
+        self.locationLabel.text = String(locationField.text!)
+        self.costLabel.text = String(costField.text!)
+        self.descriptionTextView.text = String(eventDescriptionField.text!)
     }
     
     @IBAction func addImageButton(sender: AnyObject) {
