@@ -44,7 +44,6 @@
 		129F2DBC1D1F077900B39124 = {
 			isa = PBXGroup;
 			children = (
-				129F2DE21D1F305800B39124 /* Views */,
 				129F2DDF1D1F303900B39124 /* Controller */,
 				129F2DDA1D1F2C3300B39124 /* Models */,
 				129F2DC71D1F077900B39124 /* EventGo */,
@@ -88,13 +87,6 @@
 				129F2DE01D1F304800B39124 /* EventPageController.swift */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		129F2DE21D1F305800B39124 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

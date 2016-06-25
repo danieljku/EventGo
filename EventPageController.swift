@@ -16,6 +16,25 @@ class EventPageController: UIViewController{
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    var eventList: [Event]?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func someFunction(){
+        self.eventNameLabel.text = "HI"
+        self.dateLabel.text = ""
+        self.locationLabel.text = "HI"
+        self.costLabel.text = ""
+        self.descriptionTextView.text = "HI"
+    }
     
     @IBAction func goingButton(sender: AnyObject) {
     }
