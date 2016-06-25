@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-687" y="348"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In-->
         <scene sceneID="kr8-m3-0c0">
             <objects>
-                <viewController id="xiv-LJ-Ysh" sceneMemberID="viewController">
+                <viewController title="Sign In" id="xiv-LJ-Ysh" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YTN-Pb-0Ty"/>
                         <viewControllerLayoutGuide type="bottom" id="UOe-uq-i1i"/>
@@ -69,6 +69,9 @@
                                         <rect key="frame" x="212" y="0.0" width="65" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Sign Up."/>
+                                        <connections>
+                                            <segue destination="sbQ-vm-Cmz" kind="show" identifier="SignUp" id="hAg-Uy-Zbh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -77,6 +80,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ntZ-4c-9br" kind="show" identifier="MainPage" id="yjP-kn-QMm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,6 +107,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cz1-9A-Nj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-292" y="-418"/>
+        </scene>
+        <!--Main Page-->
+        <scene sceneID="sjm-DN-eqL">
+            <objects>
+                <viewController title="Main Page" id="ntZ-4c-9br" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yLv-MS-KuD"/>
+                        <viewControllerLayoutGuide type="bottom" id="woe-bY-1eD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="On5-A7-Ouc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnie's Page Plz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9l-hG-bgF">
+                                <rect key="frame" x="233" y="290" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U9l-hG-bgF" firstAttribute="centerX" secondItem="On5-A7-Ouc" secondAttribute="centerX" id="jhG-F0-XRV"/>
+                            <constraint firstItem="U9l-hG-bgF" firstAttribute="centerY" secondItem="On5-A7-Ouc" secondAttribute="centerY" id="kHV-vi-SW7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5M-9n-igE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="-757"/>
+        </scene>
+        <!--Sign Up-->
+        <scene sceneID="0FU-BB-1f7">
+            <objects>
+                <viewController title="Sign Up" id="sbQ-vm-Cmz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fOR-xF-Rgd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iai-U4-oY8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ByJ-7s-rBG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up And Stuff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg6-mB-fnR">
+                                <rect key="frame" x="231" y="290" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yg6-mB-fnR" firstAttribute="centerX" secondItem="ByJ-7s-rBG" secondAttribute="centerX" id="Rwn-ZX-PG7"/>
+                            <constraint firstItem="yg6-mB-fnR" firstAttribute="centerY" secondItem="ByJ-7s-rBG" secondAttribute="centerY" id="TOw-hc-obJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBc-av-NvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="-10"/>
         </scene>
         <!--Create Event-->
         <scene sceneID="tne-QT-ifu">
