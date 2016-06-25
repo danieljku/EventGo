@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xiv-LJ-Ysh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -282,6 +282,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2S-IX-o5C">
                                         <rect key="frame" x="0.0" y="331" width="560" height="30"/>
                                         <state key="normal" title="Create Event"/>
+                                        <connections>
+                                            <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="lh6-Og-0jT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -406,7 +409,6 @@
                     <connections>
                         <outlet property="costLabel" destination="pij-2P-cMt" id="sHO-Pt-acl"/>
                         <outlet property="dateLabel" destination="IHA-CO-HwQ" id="Kg0-Eb-Gbb"/>
-                        <outlet property="describitionTextView" destination="DaT-fJ-MEO" id="zcA-bb-Pb0"/>
                         <outlet property="descriptionTextView" destination="DaT-fJ-MEO" id="MRI-qQ-w5Y"/>
                         <outlet property="eventNameLabel" destination="QJr-D7-bMh" id="OqW-aB-8Vu"/>
                         <outlet property="locationLabel" destination="vH8-NO-6yJ" id="yJc-td-G4c"/>

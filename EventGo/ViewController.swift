@@ -30,7 +30,10 @@ class ViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+        let eventPageController = segue.destinationViewController as! EventPageController
+        if segue.identifier == "EventPage"{
+            eventPageController.eventList = eventArr
+        }
     }
 
     
