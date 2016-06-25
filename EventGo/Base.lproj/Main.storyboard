@@ -40,7 +40,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wyq-VT-GYM">
-                                <rect key="frame" x="30" y="300" width="540" height="30"/>
+                                <rect key="frame" x="30" y="310" width="540" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -68,7 +68,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGG-Eg-9FF">
-                                <rect key="frame" x="277" y="340" width="47" height="30"/>
+                                <rect key="frame" x="277" y="360" width="47" height="30"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -83,7 +83,8 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.29411764705882354" green="0.69411764705882351" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Lqi-8q-EBK" firstAttribute="top" secondItem="n6f-J9-mx6" secondAttribute="top" id="1nC-7W-lFM"/>
                             <constraint firstItem="PXN-lu-ZDf" firstAttribute="centerX" secondItem="n6f-J9-mx6" secondAttribute="centerX" id="BzA-Kd-ryw"/>
@@ -96,8 +97,8 @@
                             <constraint firstItem="cGG-Eg-9FF" firstAttribute="centerX" secondItem="n6f-J9-mx6" secondAttribute="centerX" id="WKA-g6-83M"/>
                             <constraint firstAttribute="trailing" secondItem="Lqi-8q-EBK" secondAttribute="trailing" constant="10" id="biz-zW-6cr"/>
                             <constraint firstItem="Lqi-8q-EBK" firstAttribute="leading" secondItem="n6f-J9-mx6" secondAttribute="leading" constant="10" id="eVz-5X-dWh"/>
-                            <constraint firstItem="cGG-Eg-9FF" firstAttribute="top" secondItem="wyq-VT-GYM" secondAttribute="bottom" constant="10" id="kgk-XJ-64o"/>
-                            <constraint firstItem="wyq-VT-GYM" firstAttribute="top" secondItem="PXN-lu-ZDf" secondAttribute="bottom" constant="10" id="oQy-CF-gJd"/>
+                            <constraint firstItem="cGG-Eg-9FF" firstAttribute="top" secondItem="wyq-VT-GYM" secondAttribute="bottom" constant="20" id="kgk-XJ-64o"/>
+                            <constraint firstItem="wyq-VT-GYM" firstAttribute="top" secondItem="PXN-lu-ZDf" secondAttribute="bottom" constant="20" id="oQy-CF-gJd"/>
                             <constraint firstItem="PXN-lu-ZDf" firstAttribute="leading" secondItem="n6f-J9-mx6" secondAttribute="leading" constant="30" id="ohO-Bd-ns5"/>
                             <constraint firstAttribute="trailing" secondItem="wyq-VT-GYM" secondAttribute="trailing" constant="30" id="vYB-wk-aca"/>
                         </constraints>
