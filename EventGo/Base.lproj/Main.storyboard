@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22a-ZE-T5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-357" y="349"/>
+            <point key="canvasLocation" x="-687" y="348"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kr8-m3-0c0">
@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cz1-9A-Nj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="-357"/>
+            <point key="canvasLocation" x="-292" y="-418"/>
         </scene>
         <!--Create Event-->
         <scene sceneID="tne-QT-ifu">
@@ -282,6 +282,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2S-IX-o5C">
                                         <rect key="frame" x="0.0" y="331" width="560" height="30"/>
                                         <state key="normal" title="Create Event"/>
+                                        <connections>
+                                            <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="tis-Qz-sl5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -321,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="348"/>
+            <point key="canvasLocation" x="242" y="348"/>
         </scene>
         <!--Event Name-->
         <scene sceneID="3qm-ai-iOa">
@@ -414,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r88-XE-ilY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="349"/>
+            <point key="canvasLocation" x="242" y="1073"/>
         </scene>
     </scenes>
 </document>
