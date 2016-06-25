@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var locationField: UITextField!
     @IBOutlet weak var costField: UITextField!
     @IBOutlet weak var eventDescriptionField: UITextView!
+    @IBOutlet weak var eventNameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
 
     var eventArr = [Event]()
     
@@ -28,13 +33,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let eventPageController = segue.destinationViewController as! EventPageController
         if segue.identifier == "EventPage"{
             eventPageController.eventList = eventArr
         }
-    }
+    }*/
 
     
     @IBAction func createEventButton(sender: AnyObject) {
@@ -46,6 +51,13 @@ class ViewController: UIViewController {
         event.eventDescription = eventDescriptionField.text!
         
         eventArr.append(event)
+        
+        
+         self.eventNameLabel.text = String(eventNameField.text!)
+         self.dateLabel.text = String(dateField.text!)
+         self.locationLabel.text = String(locationField.text!)
+         self.costLabel.text = String(costField.text!)
+         self.descriptionTextView.text = String(eventDescriptionField.text!)
     }
     
     @IBAction func addImageButton(sender: AnyObject) {
