@@ -349,16 +349,7 @@
                                         <rect key="frame" x="0.0" y="331" width="560" height="30"/>
                                         <state key="normal" title="Create Event"/>
                                         <connections>
-<<<<<<< HEAD
-                                            <action selector="createEventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lvh-Mp-L03"/>
                                             <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="YA8-Xb-r7M"/>
-=======
-<<<<<<< HEAD
-                                            <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="tis-Qz-sl5"/>
-=======
-                                            <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="lh6-Og-0jT"/>
->>>>>>> origin/master
->>>>>>> origin/master
                                         </connections>
                                     </button>
                                 </subviews>
