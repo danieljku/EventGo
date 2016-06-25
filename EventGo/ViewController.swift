@@ -34,11 +34,10 @@ class ViewController: UIViewController {
     }
 
     
-    /*
+    
     @IBAction func addImageButton(sender: AnyObject) {
 
     }
-*/
     
     
 
