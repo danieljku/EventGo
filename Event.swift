@@ -16,4 +16,6 @@ class Event{
     var eventDescription = ""
     
     var imageFile = ""
+    
+    
 }
