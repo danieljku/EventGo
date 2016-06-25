@@ -37,13 +37,6 @@ class ViewController: UIViewController {
     }
 
     
-    
-    @IBAction func addImageButton(sender: AnyObject) {
-
-    }
-    
-    
-
     @IBAction func createEventButton(sender: AnyObject) {
         let event = Event()
         event.eventName = eventNameField.text!
@@ -54,6 +47,11 @@ class ViewController: UIViewController {
         
         eventArr.append(event)
     }
+    
+    @IBAction func addImageButton(sender: AnyObject) {
+
+    }
+    
     
     
 }

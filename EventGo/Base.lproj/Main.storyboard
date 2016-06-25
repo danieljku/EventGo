@@ -283,7 +283,7 @@
                                         <rect key="frame" x="0.0" y="331" width="560" height="30"/>
                                         <state key="normal" title="Create Event"/>
                                         <connections>
-                                            <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="lh6-Og-0jT"/>
+                                            <action selector="createEventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lvh-Mp-L03"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -338,13 +338,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFv-tG-xFl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IFv-tG-xFl">
                                 <rect key="frame" x="0.0" y="64" width="600" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="8BR-iY-uaR"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x1r-6D-UU1">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x1r-6D-UU1">
                                 <rect key="frame" x="78" y="214" width="95" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJr-D7-bMh">
