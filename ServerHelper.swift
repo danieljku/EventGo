@@ -240,9 +240,9 @@ class ServerHelper {
         
         task.resume()
         print("Before stall")
-        while(ServerHelper.userCreated == nil) {
+        /*while(ServerHelper.userCreated == nil) {
             //stall
-        }
+        }*/
         print("After stall")
         return
     }

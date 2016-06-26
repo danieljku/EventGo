@@ -106,7 +106,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let eventPageViewController = segue.destinationViewController as! EventPageViewController
-        if segue.identifier == "EventPage"{
+        if segue.identifier == "CreateEventSegue"{
             //eventPageViewController.eventPage = Event()
             
             guard (eventNameField.text != "") else{
