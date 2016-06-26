@@ -11,6 +11,7 @@
 		0192124E1D1F69F20072D614 /* ServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0192124D1D1F69F20072D614 /* ServerHelper.swift */; };
 		019212501D1F84D90072D614 /* PictureAddHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0192124F1D1F84D90072D614 /* PictureAddHelper.swift */; };
 		019212521D1F94D20072D614 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019212511D1F94D20072D614 /* SignUpViewController.swift */; };
+		019212541D1FB3410072D614 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019212531D1FB3410072D614 /* User.swift */; };
 		01D87B281D1F37B10073341C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D87B271D1F37B10073341C /* SignInViewController.swift */; };
 		126263C11D1F569100407A6E /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126263C01D1F569100407A6E /* EventPageViewController.swift */; };
 		129F2DC91D1F077900B39124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F2DC81D1F077900B39124 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 		0192124D1D1F69F20072D614 /* ServerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHelper.swift; sourceTree = "<group>"; };
 		0192124F1D1F84D90072D614 /* PictureAddHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureAddHelper.swift; sourceTree = "<group>"; };
 		019212511D1F94D20072D614 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		019212531D1FB3410072D614 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		01D87B271D1F37B10073341C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = EventGo/SignInViewController.swift; sourceTree = "<group>"; };
 		126263C01D1F569100407A6E /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		129F2DC51D1F077900B39124 /* EventGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				129F2DDD1D1F2C8200B39124 /* Event.swift */,
+				019212531D1FB3410072D614 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				019212521D1F94D20072D614 /* SignUpViewController.swift in Sources */,
 				019212501D1F84D90072D614 /* PictureAddHelper.swift in Sources */,
 				0192124E1D1F69F20072D614 /* ServerHelper.swift in Sources */,
+				019212541D1FB3410072D614 /* User.swift in Sources */,
 				129F2DC91D1F077900B39124 /* AppDelegate.swift in Sources */,
 				126263C11D1F569100407A6E /* EventPageViewController.swift in Sources */,
 				01D87B281D1F37B10073341C /* SignInViewController.swift in Sources */,

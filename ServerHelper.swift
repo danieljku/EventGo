@@ -10,6 +10,11 @@ import Foundation
 
 class ServerHelper {
     
+    static var loading = false
+    
+    // For attempLogIn
+    static var userLoggedIn: Bool!
+    
     static func retreiveEvents() {
         
         // Set up the request
@@ -46,16 +51,20 @@ class ServerHelper {
                 }
             }
         }
+        
+        task.resume()
     }
     
     // Try to log in
-    static func attemptLogin(email: String!, password: String!) -> Bool {
+    static func attemptLogIn(email: String!, password: String!) {
         
-        var loggedIn = false
+        loading = true
         
         // If there's nothing in email or password, just return false, no need to check
         if email == nil || email == "" || password == nil || password == "" {
-            return false
+            loading = false
+            userLoggedIn = false
+            return
         }
         
         // Set up the request
@@ -87,17 +96,16 @@ class ServerHelper {
                 
                 if let dictionary = parsedResult["user"] {
                     print(dictionary)
-                    loggedIn = true
-                    print("IN THE TASK")
+                    
+                    userLoggedIn = true
+                    loading = false
+                    
                     return
-                    //return true
                 }
             }
         }
         
-        print("BEFORE THE TASK")
         task.resume()
-        print("AFTER THE TASK")
-        return loggedIn
+        return
     }
 }
