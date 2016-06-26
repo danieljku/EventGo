@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class Event{
-    var eventName = ""
-    var eventDate = ""
-    var eventAddress = ""
-    var eventCity = ""
-    var eventState = ""
-    var eventZipCode = 0
-    var eventCost = 0.0
-    var eventDescription = ""
+class Event {
+    var name = ""
+    var date = ""
+    var address = ""
+    var city = ""
+    var state = ""
+    var zipCode = ""
+    var cost = ""
+    var description = ""
     
     var imageFile = ""
 }

@@ -25,14 +25,14 @@ class EventPageViewController: UIViewController {
         super.viewDidLoad()
 
         //Retrieve data from ViewController and insert into text fields of the labels
-        eventNameLabel.text = eventPage!.eventName
+        /*eventNameLabel.text = eventPage!.eventName
         dateLabel.text = eventPage!.eventDate
         addressLabel.text = eventPage!.eventAddress
         stateLabel.text = eventPage!.eventState
         cityLabel.text = eventPage!.eventCity
         zipCodeLabel.text = String(eventPage!.eventZipCode)
         costLabel.text = "$" + String(eventPage!.eventCost)
-        descriptionTextView.text = eventPage!.eventDescription
+        descriptionTextView.text = eventPage!.eventDescription*/
 
         
     }

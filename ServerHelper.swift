@@ -124,68 +124,31 @@ class ServerHelper {
         }
         
         task.resume()
-        return
-    }
-    
-    static func retreiveEvents() {
-        
-        // Set up the request
-        let apiURL = NSURL(string: "STRINGHEREPLEASE")
-        let request = NSURLRequest(URL: apiURL!)
-        
-        // Create a task
-        let task = NSURLSession.sharedSession().dataTaskWithURL(request.URL!) {
-            (data, response, error) in
-            
-            if error == nil {
-                guard let data = data else { print("No data was returned by the request!"); return }
-                
-                let parsedResult: AnyObject!
-                
-                do {
-                    // Serialize means converting object to streams of bytes
-                    print(data)
-                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-                    
-                    print(parsedResult)
-                }
-                catch {
-                    print("Could not parse the data as JSON: '\(data)'")
-                    return
-                }
-                
-                if let dictionary = parsedResult["events"] {
-                    print(dictionary)
-                
-                    for each in dictionary as! [[String: String]] {
-                        print(each["userid"]!)
-                    }
-                }
-            }
+        while(ServerHelper.userLoggedIn == nil) {
+            //stall
         }
-        
-        task.resume()
         return
     }
     
-    /*static func createUser(email: String!, password: String!, firstName: String!, lastName: String!) {
-        
-        loading = true
+    // Retreive events
+    static var eventsRetreived: Bool!
+    static func retreiveEvents() -> [Event] {
+        let events: [Event] = []
+        eventsRetreived = nil
         
         // Set up the request
-        let str = String("http://curtastic.com/eventtogo/?action=adduser&email" + email + "&password" + password + "&firstname" + firstName + "&lastname" + lastName)
+        let str = String("http://curtastic.com/eventtogo/?action=getevents")
         let apiURL = NSURL(string: str)
         let request = NSURLRequest(URL: apiURL!)
         
         // Create a task
         let task = NSURLSession.sharedSession().dataTaskWithURL(request.URL!) {
-            
             (data, response, error) in
             
             if error == nil {
-                
                 guard let data = data else {
                     print("No data was returned by the request!")
+                    eventsRetreived = false
                     return
                 }
                 
@@ -200,20 +163,38 @@ class ServerHelper {
                 }
                 catch {
                     print("Could not parse the data as JSON: '\(data)'")
+                    eventsRetreived = false
                     return
                 }
                 
-                if let dictionary = parsedResult["user"] {
+                if let dictionary = parsedResult["events"] {
                     print(dictionary)
                     
-                    loading = false
+                    for dictEvent in dictionary as! [[String: String]] {
+                        
+                        let event = Event()
+                        event.name = dictEvent["name"]!
+                        event.address = dictEvent["street"]!
+                        event.city = dictEvent["city"]!
+                        event.state = dictEvent["state"]!
+                        event.zipCode = dictEvent["zip"]!
+                        event.description = dictEvent["description"]!
+                        event.date = dictEvent["startTime"]!
+                        event.cost = "20"
+                    }
                     
+                    eventsRetreived = true
                     return
                 }
             }
         }
         
         task.resume()
-        return
-    }*/
+        while(ServerHelper.userLoggedIn == nil) {
+            //stall
+        }
+        
+        return events
+        
+    }
 }

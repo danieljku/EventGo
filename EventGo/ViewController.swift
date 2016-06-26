@@ -164,14 +164,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             }
 
             //Sends data to the Event Page
-            eventPageViewController.eventPage?.eventName = eventNameField.text!
+            /*eventPageViewController.eventPage?.eventName = eventNameField.text!
             eventPageViewController.eventPage?.eventDate = dateField.text!
             eventPageViewController.eventPage?.eventAddress = addressField.text!
             eventPageViewController.eventPage?.eventCity = cityField.text!
             eventPageViewController.eventPage?.eventState = stateField.text!
             eventPageViewController.eventPage?.eventZipCode = Int(zipCodeField.text!)!
             eventPageViewController.eventPage?.eventCost = Double(costField.text!)!
-            eventPageViewController.eventPage?.eventDescription = eventDescriptionField.text!
+            eventPageViewController.eventPage?.eventDescription = eventDescriptionField.text!*/
      }
     }
     
