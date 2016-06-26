@@ -19,21 +19,25 @@ class EventPageViewController: UIViewController {
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    var eventPage: Event?
+    var event = Event()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //Retrieve data from ViewController and insert into text fields of the labels
-        /*eventNameLabel.text = eventPage!.eventName
-        dateLabel.text = eventPage!.eventDate
-        addressLabel.text = eventPage!.eventAddress
-        stateLabel.text = eventPage!.eventState
-        cityLabel.text = eventPage!.eventCity
-        zipCodeLabel.text = String(eventPage!.eventZipCode)
-        costLabel.text = "$" + String(eventPage!.eventCost)
-        descriptionTextView.text = eventPage!.eventDescription*/
+//        eventNameLabel.text = eventPage!.eventName
+//        dateLabel.text = eventPage!.eventDate
+//        addressLabel.text = eventPage!.eventAddress
+//        stateLabel.text = eventPage!.eventState
+//        cityLabel.text = eventPage!.eventCity
+//        zipCodeLabel.text = String(eventPage!.eventZipCode)
+//        costLabel.text = "$" + String(eventPage!.eventCost)
+//        descriptionTextView.text = eventPage!.eventDescription
+        print(event.name)
+        
+        
 
+        
         
     }
 

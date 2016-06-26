@@ -61,7 +61,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let eventPageViewController = segue.destinationViewController as! EventPageViewController
         if segue.identifier == "EventPage"{
-            eventPageViewController.eventPage = Event()
+            //eventPageViewController.eventPage = Event()
             
             guard (eventNameField.text != "") else{
                 let alertController = UIAlertController(title: "Error", message: "You didnt enter in an event title!", preferredStyle: .Alert)
@@ -163,15 +163,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 return
             }
 
-            //Sends data to the Event Page
-            /*eventPageViewController.eventPage?.eventName = eventNameField.text!
-            eventPageViewController.eventPage?.eventDate = dateField.text!
-            eventPageViewController.eventPage?.eventAddress = addressField.text!
-            eventPageViewController.eventPage?.eventCity = cityField.text!
-            eventPageViewController.eventPage?.eventState = stateField.text!
-            eventPageViewController.eventPage?.eventZipCode = Int(zipCodeField.text!)!
-            eventPageViewController.eventPage?.eventCost = Double(costField.text!)!
-            eventPageViewController.eventPage?.eventDescription = eventDescriptionField.text!*/
+//            //Sends data to the Event Page
+//            eventPageViewController.eventPage?.eventName = eventNameField.text!
+//            eventPageViewController.eventPage?.eventDate = dateField.text!
+//            eventPageViewController.eventPage?.eventAddress = addressField.text!
+//            eventPageViewController.eventPage?.eventCity = cityField.text!
+//            eventPageViewController.eventPage?.eventState = stateField.text!
+//            eventPageViewController.eventPage?.eventZipCode = Int(zipCodeField.text!)!
+//            eventPageViewController.eventPage?.eventCost = Double(costField.text!)!
+//            eventPageViewController.eventPage?.eventDescription = eventDescriptionField.text!
      }
     }
     

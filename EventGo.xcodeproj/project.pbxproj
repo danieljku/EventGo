@@ -12,6 +12,7 @@
 		019212501D1F84D90072D614 /* PictureAddHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0192124F1D1F84D90072D614 /* PictureAddHelper.swift */; };
 		019212521D1F94D20072D614 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019212511D1F94D20072D614 /* SignUpViewController.swift */; };
 		019212541D1FB3410072D614 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019212531D1FB3410072D614 /* User.swift */; };
+		01A133351D1FF265004B4F1E /* SignUpContinuedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A133341D1FF265004B4F1E /* SignUpContinuedViewController.swift */; };
 		01D87B281D1F37B10073341C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D87B271D1F37B10073341C /* SignInViewController.swift */; };
 		126263C11D1F569100407A6E /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126263C01D1F569100407A6E /* EventPageViewController.swift */; };
 		129F2DC91D1F077900B39124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F2DC81D1F077900B39124 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 		129F2DD01D1F077A00B39124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 129F2DCF1D1F077A00B39124 /* Assets.xcassets */; };
 		129F2DD31D1F077A00B39124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129F2DD11D1F077A00B39124 /* LaunchScreen.storyboard */; };
 		129F2DDE1D1F2C8200B39124 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F2DDD1D1F2C8200B39124 /* Event.swift */; };
+		4C2F1DA11D1FD4F800FF8CF3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1DA01D1FD4F800FF8CF3 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		0192124F1D1F84D90072D614 /* PictureAddHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureAddHelper.swift; sourceTree = "<group>"; };
 		019212511D1F94D20072D614 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		019212531D1FB3410072D614 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		01A133341D1FF265004B4F1E /* SignUpContinuedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpContinuedViewController.swift; sourceTree = "<group>"; };
 		01D87B271D1F37B10073341C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = EventGo/SignInViewController.swift; sourceTree = "<group>"; };
 		126263C01D1F569100407A6E /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		129F2DC51D1F077900B39124 /* EventGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +39,7 @@
 		129F2DD21D1F077A00B39124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		129F2DD41D1F077A00B39124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		129F2DDD1D1F2C8200B39124 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4C2F1DA01D1FD4F800FF8CF3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +106,11 @@
 		129F2DDF1D1F303900B39124 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				01D87B271D1F37B10073341C /* SignInViewController.swift */,
+				4C2F1DA01D1FD4F800FF8CF3 /* MapViewController.swift */,
 				126263C01D1F569100407A6E /* EventPageViewController.swift */,
+				01D87B271D1F37B10073341C /* SignInViewController.swift */,
 				019212511D1F94D20072D614 /* SignUpViewController.swift */,
+				01A133341D1FF265004B4F1E /* SignUpContinuedViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -141,7 +147,7 @@
 				TargetAttributes = {
 					129F2DC41D1F077900B39124 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = WTHBF7L2UE;
+						DevelopmentTeam = TC856Y48HM;
 					};
 				};
 			};
@@ -184,8 +190,10 @@
 				129F2DCB1D1F077900B39124 /* ViewController.swift in Sources */,
 				129F2DDE1D1F2C8200B39124 /* Event.swift in Sources */,
 				019212521D1F94D20072D614 /* SignUpViewController.swift in Sources */,
+				4C2F1DA11D1FD4F800FF8CF3 /* MapViewController.swift in Sources */,
 				019212501D1F84D90072D614 /* PictureAddHelper.swift in Sources */,
 				0192124E1D1F69F20072D614 /* ServerHelper.swift in Sources */,
+				01A133351D1FF265004B4F1E /* SignUpContinuedViewController.swift in Sources */,
 				019212541D1FB3410072D614 /* User.swift in Sources */,
 				129F2DC91D1F077900B39124 /* AppDelegate.swift in Sources */,
 				126263C11D1F569100407A6E /* EventPageViewController.swift in Sources */,
