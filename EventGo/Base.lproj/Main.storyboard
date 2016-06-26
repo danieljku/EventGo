@@ -289,7 +289,6 @@
                                 </state>
                                 <connections>
                                     <action selector="continueButtonAction:" destination="vGy-3Y-j84" eventType="touchUpInside" id="WXJ-Nc-6UU"/>
-                                    <segue destination="tnx-Yl-Cdn" kind="show" identifier="ContinueSegue" id="GgO-So-nyX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-Ml-F8B">
@@ -335,6 +334,7 @@
                         <outlet property="errorLabel" destination="pfH-Ml-F8B" id="L6c-2w-ak4"/>
                         <outlet property="firstNameField" destination="FdJ-Tf-8QN" id="clp-Pw-y8l"/>
                         <outlet property="lastNameField" destination="dMT-eV-Lau" id="ywb-O5-UYU"/>
+                        <segue destination="tnx-Yl-Cdn" kind="show" identifier="ContinueSegue" id="YzN-fZ-pto"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qb8-wv-Nhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1028,6 +1028,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
+                                <rect key="frame" x="10" y="342" width="580" height="208"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
+ 
+Known as pioneers of global hackathons for more than four years, AngelHack’s more than 97,000 developers, designers, and entrepreneurs compete to build, test and launch new solutions over the course of a weekend.AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
+ 
+Known as pioneers of global hackathons for more than four years, AngelHack’s more than 97,000 developers, designers, and entrepreneurs compete to build, test and launch new solutions over the course of a weekend.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZX8-HK-Iqg">
                                 <rect key="frame" x="10" y="765" width="580" height="30"/>
                                 <state key="normal" title="Going"/>
@@ -1185,6 +1198,8 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
     <inferredMetricsTieBreakers>
         <segue reference="vA2-65-QAi"/>
         <segue reference="K8D-30-FWU"/>
-        <segue reference="qi5-IW-BeM"/>
+
+        <segue reference="gpb-hF-HlW"/>
+        <segue reference="wzn-Zv-6b2"/>
     </inferredMetricsTieBreakers>
 </document>

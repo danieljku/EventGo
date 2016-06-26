@@ -34,13 +34,14 @@ class SignUpContinuedViewController: UIViewController {
                 self.performSegueWithIdentifier("CreatedUserSegue", sender: sender)
             })
             
-            //self.performSegueWithIdentifier("MapSegue", sender: sender)
-            
         }
         else {
             self.errorLabel.textColor = errorRedColor
             self.errorLabel.text = "Could not create account."
+            self.errorLabel.fadeIn()
         }
+        
+        self.errorLabel.fadeIn()
     }
     
     func dismissKeyboard() {

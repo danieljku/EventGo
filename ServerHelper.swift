@@ -80,7 +80,7 @@ class ServerHelper {
         userCreated = nil
         
         // Set up the request
-        let str = String("http://curtastic.com/eventtogo/?action=adduser&email" + email + "&password" + password + "&firstname" + firstName + "&lastname" + lastName)
+        let str = String("http://curtastic.com/eventtogo/?action=adduser&email=" + email + "&password=" + password + "&firstname=" + firstName + "&lastname=" + lastName)
         let apiURL = NSURL(string: str)
         let request = NSURLRequest(URL: apiURL!)
         

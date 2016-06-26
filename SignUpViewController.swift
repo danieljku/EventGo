@@ -15,21 +15,27 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    let errorRedColor = UIColor(red: 241/255, green: 0/255, blue: 0/255, alpha: 255/255)
-    let errorGreenColor = UIColor(red: 67/255, green: 160/255, blue: 157/255, alpha: 255/255)
-    
     @IBAction func continueButtonAction(sender: AnyObject) {
+        
+        let errorRedColor = UIColor(red: 241/255, green: 0/255, blue: 0/255, alpha: 255/255)
+        let errorGreenColor = UIColor(red: 67/255, green: 160/255, blue: 157/255, alpha: 255/255)
+        
         // Start fade out
         self.errorLabel.fadeOut(completion: {
             (finished: Bool) -> Void in
             
-            if self.firstNameField.text == nil || self.firstNameField.text == "" || self.lastNameField.text == nil || self.lastNameField.text == "" {
-                self.errorLabel.textColor = self.errorRedColor
+            if self.firstNameField.text! == "" || self.lastNameField.text! == "" {
+                self.errorLabel.textColor = errorRedColor
                 self.errorLabel.text = "Please enter a first and last name."
                 self.errorLabel.fadeIn()
             }
             else {
-                self.performSegueWithIdentifier("ContinueSegue", sender: sender)
+                self.errorLabel.textColor = errorGreenColor
+                self.errorLabel.text = "Let's continue."
+                self.errorLabel.fadeIn(completion: {
+                    (finished: Bool) -> Void in
+                    self.performSegueWithIdentifier("ContinueSegue", sender: sender)
+                })
             }
             
             // Start fade in

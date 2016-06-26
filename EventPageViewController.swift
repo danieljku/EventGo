@@ -25,7 +25,9 @@ class EventPageViewController: UIViewController {
         super.viewDidLoad()
         
         eventNameLabel.font = UIFont.boldSystemFontOfSize(16.0)
-
+        eventNameLabel.text = event.name
+        addressLabel.text = event.address
+        
         //Retrieve data from ViewController and insert into text fields of the labels
 //        eventNameLabel.text = eventPage!.eventName
 //        dateLabel.text = eventPage!.eventDate

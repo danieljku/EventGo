@@ -24,15 +24,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         checkLocationAuthorizationStatus()
     }
     
+    var anything = true
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [CLLocation]) {
         
         if (!locations.isEmpty)
         {
-            
             let myLocation  = locations[0] as! CLLocation
             
+            if (anything) {
+                mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake(myLocation.coordinate.latitude, myLocation.coordinate.longitude), MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
+                anything = false
+            }
             
-            mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake(myLocation.coordinate.latitude, myLocation.coordinate.longitude), MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
         }
         
     }
@@ -96,7 +99,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     
                     print(parsedResult)
                 } catch {
-                    print("Coult not parse the data as JSON: '\(data)'")
+                    print("Could not parse the data as JSON: '\(data)'")
                     return
                 }
                 
@@ -141,7 +144,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
         task.resume()
         
-        for address in addresses {
+        /*for address in addresses {
             var location: String = address
             var geocoder: CLGeocoder = CLGeocoder()
             geocoder.geocodeAddressString(location,completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
@@ -171,7 +174,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     //self.mapView.addAnnotation(placemark)
                 }
             })
-        }
+        }*/
     }
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
@@ -219,7 +222,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             
 
-            
+            performSegueWithIdentifier("pinView", sender: self)
         }
     }
     
@@ -235,7 +238,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             
             
-                performSegueWithIdentifier("pinView", sender: self)
+                
             }
             
             
