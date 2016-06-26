@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xiv-LJ-Ysh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sat-Vx-ZtH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n0e-iU-6WX"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wao-He-4Kc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22a-ZE-T5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -577,6 +577,7 @@
                         <outlet property="dateField" destination="kOP-Im-oWO" id="JES-Q6-Dg0"/>
                         <outlet property="eventDescriptionField" destination="GWK-Tf-5My" id="tpg-2s-XfJ"/>
                         <outlet property="eventNameField" destination="z2s-ci-Lgw" id="xp2-Kc-wfM"/>
+                        <outlet property="imageView" destination="pa2-wo-QyG" id="50F-ro-QSf"/>
                         <outlet property="stateField" destination="e1S-Ah-zG7" id="rFl-3u-ONu"/>
                         <outlet property="zipCodeField" destination="ao6-qw-cs1" id="chP-mn-urH"/>
                     </connections>
@@ -668,7 +669,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="QuT-cA-bYf"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="addressLabel" destination="ANb-P8-gjE" id="VWk-zv-9w2"/>
+                        <outlet property="addressLabel" destination="vH8-NO-6yJ" id="pLF-RN-btO"/>
                         <outlet property="cityLabel" destination="ANb-P8-gjE" id="xCf-wa-dUw"/>
                         <outlet property="costLabel" destination="pij-2P-cMt" id="MS6-83-tPJ"/>
                         <outlet property="dateLabel" destination="IHA-CO-HwQ" id="UqD-ed-2Rg"/>

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cityField: UITextField!
     @IBOutlet weak var stateField: UITextField!
     @IBOutlet weak var zipCodeField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     
     var eventList = Event()
 
@@ -47,28 +48,29 @@ class ViewController: UIViewController {
         let eventPageViewController = segue.destinationViewController as! EventPageViewController
         if segue.identifier == "EventPage"{
             eventPageViewController.eventPage = eventList
+            
+            eventPageViewController.eventPage?.eventName = eventNameField.text!
+            eventPageViewController.eventPage?.eventDate = dateField.text!
+            eventPageViewController.eventPage?.eventAddress = addressField.text!
+            eventPageViewController.eventPage?.eventCity = cityField.text!
+            eventPageViewController.eventPage?.eventState = stateField.text!
+            eventPageViewController.eventPage?.eventZipCode = zipCodeField.text!
+            eventPageViewController.eventPage?.eventCost = costField.text!
+            eventPageViewController.eventPage?.eventDescription = eventDescriptionField.text!
      }
     }
     
     
     @IBAction func createEventButton(sender: AnyObject) {
-        let event = Event()
-        
-        event.eventName = eventNameField.text!
-        event.eventDate = dateField.text!
-        event.eventAddress = addressField.text!
-        event.eventCity = cityField.text!
-        event.eventState = stateField.text!
-        event.eventZipCode = zipCodeField.text!
-        event.eventCost = costField.text!
-        event.eventDescription = eventDescriptionField.text!
-        
-        eventList = event
+        //guard let eventName = eventNameField.text{
+            
+        //}
 
     }
     
     @IBAction func addImageButton(sender: AnyObject) {
-
+        
+        
     }
     
     
