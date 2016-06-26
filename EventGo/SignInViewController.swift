@@ -30,9 +30,7 @@ class SignInViewController: UIViewController {
                 self.errorLabel.fadeIn(completion: {
                     (finished: Bool) -> Void in
                     self.performSegueWithIdentifier("MapSegue", sender: sender)
-                })
-                
-                //self.performSegueWithIdentifier("MapSegue", sender: sender)
+                    })
                 
             }
             else {
