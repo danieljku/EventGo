@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextViewDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     @IBOutlet weak var eventNameField: UITextField!
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var addressField: UITextField!
@@ -18,6 +18,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var costField: UITextField!
     @IBOutlet weak var eventDescriptionField: UITextView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    var imagePickerController = UIImagePickerController()
     
     var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
                   "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Lousiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
@@ -29,11 +31,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         super.viewDidLoad()
         
-        let pickerView = UIPickerView()
+        //let pickerView = UIPickerView()
         
-        pickerView.delegate = self
+        //pickerView.delegate = self
         
-        stateField.inputView = pickerView
+        //stateField.inputView = pickerView
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -43,9 +45,37 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         eventDescriptionField.layer.borderWidth = 1.0
         eventDescriptionField.layer.cornerRadius = 5
         
-        
+        imagePickerController = UIImagePickerController()
 
     }
+    @IBAction func addPicture(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
+            print("Button capture")
+            
+            //imagePickerController = UIImagePickerController()
+            //imagePickerController!.sourceType = sourceType
+            imagePickerController.delegate = self
+            
+            
+            //imagePickerController.delegate = self
+            imagePickerController.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
+            imagePickerController.allowsEditing = false
+            
+            self.presentViewController(imagePickerController, animated: true, completion: nil)
+        }
+
+    }
+    
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
+        
+        imageView.image = image
+        
+    }
+    
     
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
