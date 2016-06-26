@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    @IBOutlet weak var eventNameField: UIStackView!
-    @IBOutlet weak var dateField: UIStackView!
+    @IBOutlet weak var eventNameField: UITextField!
+    @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var cityField: UITextField!
     @IBOutlet weak var stateField: UITextField!

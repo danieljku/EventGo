@@ -408,7 +408,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QHz-I4-PTg">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QHz-I4-PTg" id="A11-o4-Lfk">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -760,9 +760,9 @@
                         <outlet property="addressField" destination="2Ln-b1-PIn" id="Nmu-b7-4mA"/>
                         <outlet property="cityField" destination="1qt-za-QtA" id="Nwi-LF-Dd2"/>
                         <outlet property="costField" destination="oRH-F2-6ad" id="TfU-Hi-gF3"/>
-                        <outlet property="dateField" destination="DaL-hv-enJ" id="Srf-DV-ZQL"/>
+                        <outlet property="dateField" destination="sVq-UE-FRg" id="wbD-l4-ODl"/>
                         <outlet property="eventDescriptionField" destination="CnP-nr-GCi" id="t9D-G4-BQ7"/>
-                        <outlet property="eventNameField" destination="oHU-hG-gXJ" id="M0d-pu-q9F"/>
+                        <outlet property="eventNameField" destination="mNj-of-xe8" id="y6d-2N-DHI"/>
                         <outlet property="imageView" destination="pa2-wo-QyG" id="50F-ro-QSf"/>
                         <outlet property="stateField" destination="HMB-a0-eUv" id="nf8-Pl-gyh"/>
                         <outlet property="zipCodeField" destination="hXc-Aq-Scn" id="Isd-e2-lsS"/>
@@ -784,13 +784,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backgroundLogin" translatesAutoresizingMaskIntoConstraints="NO" id="IFv-tG-xFl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLogin" translatesAutoresizingMaskIntoConstraints="NO" id="IFv-tG-xFl">
                                 <rect key="frame" x="0.0" y="64" width="600" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="8BR-iY-uaR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AngelHacks Hackathon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJr-D7-bMh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AngelHacks Hackathon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJr-D7-bMh">
                                 <rect key="frame" x="10" y="202" width="580" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="TfU-Ci-cEr"/>
@@ -799,24 +799,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
-                                <rect key="frame" x="10" y="342" width="580" height="208"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
- 
-Known as pioneers of global hackathons for more than four years, AngelHack’s more than 97,000 developers, designers, and entrepreneurs compete to build, test and launch new solutions over the course of a weekend.AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
- 
-Known as pioneers of global hackathons for more than four years, AngelHack’s more than 97,000 developers, designers, and entrepreneurs compete to build, test and launch new solutions over the course of a weekend.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZX8-HK-Iqg">
                                 <rect key="frame" x="10" y="565" width="580" height="30"/>
                                 <state key="normal" title="Going"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2pG-7d-ICZ" userLabel="Event Info Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2pG-7d-ICZ" userLabel="Event Info Stack View">
                                 <rect key="frame" x="10" y="249" width="211" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday, May 17, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHA-CO-HwQ">
@@ -913,10 +900,8 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="QJr-D7-bMh" secondAttribute="trailing" constant="10" id="17c-Jf-Iad"/>
                             <constraint firstItem="QJr-D7-bMh" firstAttribute="centerX" secondItem="kVp-Rp-wOv" secondAttribute="centerX" id="DBQ-hN-vMG"/>
-
                             <constraint firstItem="DaT-fJ-MEO" firstAttribute="top" secondItem="2pG-7d-ICZ" secondAttribute="bottom" constant="13" id="Dex-ef-SXv"/>
                             <constraint firstItem="DaT-fJ-MEO" firstAttribute="trailing" secondItem="ZX8-HK-Iqg" secondAttribute="trailing" id="OSn-vR-Se2"/>
-
                             <constraint firstItem="ZX8-HK-Iqg" firstAttribute="centerX" secondItem="kVp-Rp-wOv" secondAttribute="centerX" id="R14-8q-ylY"/>
                             <constraint firstItem="LML-zX-2jy" firstAttribute="top" secondItem="ZX8-HK-Iqg" secondAttribute="bottom" constant="5" id="TgO-z0-YJm"/>
                             <constraint firstItem="2pG-7d-ICZ" firstAttribute="top" secondItem="QJr-D7-bMh" secondAttribute="bottom" constant="7" id="UeZ-G7-5M0"/>
@@ -927,10 +912,8 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                             <constraint firstItem="IFv-tG-xFl" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" id="g8c-r3-bjk"/>
                             <constraint firstAttribute="trailing" secondItem="IFv-tG-xFl" secondAttribute="trailing" id="jmI-fy-dZ0"/>
                             <constraint firstItem="QJr-D7-bMh" firstAttribute="top" secondItem="IFv-tG-xFl" secondAttribute="bottom" constant="10" id="mgb-9Z-Ak5"/>
-
                             <constraint firstItem="DaT-fJ-MEO" firstAttribute="top" secondItem="2pG-7d-ICZ" secondAttribute="bottom" constant="13" id="rpj-iO-n9N"/>
                             <constraint firstItem="LML-zX-2jy" firstAttribute="top" secondItem="DaT-fJ-MEO" secondAttribute="bottom" constant="50" id="sjW-Jn-0iJ"/>
-
                             <constraint firstItem="QJr-D7-bMh" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" constant="10" id="v3z-GR-218"/>
                             <constraint firstItem="ZX8-HK-Iqg" firstAttribute="top" secondItem="DaT-fJ-MEO" secondAttribute="bottom" constant="15" id="wrl-nH-wjX"/>
                             <constraint firstItem="ZX8-HK-Iqg" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" constant="10" id="x2O-VE-ce0"/>
@@ -939,9 +922,6 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="DBQ-hN-vMG"/>
-                                <exclude reference="Olg-RF-9qj"/>
-                                <exclude reference="Pq7-GE-nKm"/>
-                                <exclude reference="S8F-XQ-1iN"/>
                                 <exclude reference="sjW-Jn-0iJ"/>
                             </mask>
                         </variation>
@@ -972,6 +952,5 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
     <inferredMetricsTieBreakers>
         <segue reference="K8D-30-FWU"/>
         <segue reference="qi5-IW-BeM"/>
-
     </inferredMetricsTieBreakers>
 </document>
