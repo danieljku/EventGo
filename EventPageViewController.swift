@@ -26,14 +26,14 @@ class EventPageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        self.eventNameLabel.text = eventPage!.eventName
-        self.dateLabel.text = eventPage!.eventDate
-        self.addressLabel.text = eventPage!.eventAddress
-        self.stateLabel.text = eventPage!.eventState
-        self.cityLabel.text = eventPage!.eventCity
-        self.zipCodeLabel.text = String(eventPage!.eventZipCode)
-        self.costLabel.text = String(eventPage!.eventCost)
-        self.descriptionTextView.text = eventPage!.eventDescription
+        eventNameLabel.text = eventPage!.eventName
+        dateLabel.text = eventPage!.eventDate
+        addressLabel.text = eventPage!.eventAddress
+        stateLabel.text = eventPage!.eventState
+        cityLabel.text = eventPage!.eventCity
+        zipCodeLabel.text = String(eventPage!.eventZipCode)
+        costLabel.text = String(eventPage!.eventCost)
+        descriptionTextView.text = eventPage!.eventDescription
 
         
     }

@@ -542,7 +542,8 @@
                                         <rect key="frame" x="0.0" y="337" width="560" height="30"/>
                                         <state key="normal" title="Create Event"/>
                                         <connections>
-                                            <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="YA8-Xb-r7M"/>
+                                            <action selector="createEventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F2U-yz-iV8"/>
+                                            <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="WDd-3L-JlL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -579,7 +580,7 @@
                         <outlet property="costField" destination="SrW-f1-Ukz" id="MK4-l9-gRW"/>
                         <outlet property="dateField" destination="kOP-Im-oWO" id="JES-Q6-Dg0"/>
                         <outlet property="eventDescriptionField" destination="GWK-Tf-5My" id="tpg-2s-XfJ"/>
-                        <outlet property="eventNameField" destination="z2s-ci-Lgw" id="xp2-Kc-wfM"/>
+                        <outlet property="eventNameField" destination="z2s-ci-Lgw" id="pel-Hw-sst"/>
                         <outlet property="imageView" destination="pa2-wo-QyG" id="50F-ro-QSf"/>
                         <outlet property="stateField" destination="e1S-Ah-zG7" id="rFl-3u-ONu"/>
                         <outlet property="zipCodeField" destination="ao6-qw-cs1" id="chP-mn-urH"/>
@@ -634,7 +635,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
                                 <rect key="frame" x="35" y="405" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Description text box blahhhhhasdfkhasldkfjasl;kdjf;lasjdfl;kjasdlkfjasldfjlaksdjflksdjflkjaslfjsdlkfjasljflasjflksdjflksjflasjflwjeisldfjaslifiejiadlsflkasdjflkasdjfklsjdflk</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
