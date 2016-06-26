@@ -10,7 +10,7 @@ import Foundation
 
 class Event{
     var eventName = ""
-    var eventDate = ""
+    var eventDate: = ""
     var eventAddress = ""
     var eventCity = ""
     var eventState = ""

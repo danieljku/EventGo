@@ -63,9 +63,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func createEventButton(sender: AnyObject) {
-        guard let eventName = String(eventNameField.text!) else{
+        guard let eventName = Optional(eventNameField.text) else{
+            let alertController = UIAlertController(title: "Error", message: "You didnt enter in an event title!", preferredStyle: .Alert)
+            let closeAction = UIAlertAction(title: "Close", style: .Default){ (action) in
+            }
+            alertController.addAction(closeAction)
+            
+            self.presentViewController(alertController, animated: true){
+            }
+            
             
         }
+        
+        
 
     }
     

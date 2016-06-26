@@ -31,8 +31,8 @@ class EventPageViewController: UIViewController {
         self.addressLabel.text = eventPage!.eventAddress
         self.stateLabel.text = eventPage!.eventState
         self.cityLabel.text = eventPage!.eventCity
-        self.zipCodeLabel.text = eventPage!.eventZipCode
-        self.costLabel.text = eventPage!.eventCost
+        self.zipCodeLabel.text = String(eventPage!.eventZipCode)
+        self.costLabel.text = String(eventPage!.eventCost)
         self.descriptionTextView.text = eventPage!.eventDescription
 
         
