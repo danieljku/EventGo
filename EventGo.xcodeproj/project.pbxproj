@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01D87B281D1F37B10073341C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D87B271D1F37B10073341C /* SignInViewController.swift */; };
+		126263C11D1F569100407A6E /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126263C01D1F569100407A6E /* EventPageViewController.swift */; };
 		129F2DC91D1F077900B39124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F2DC81D1F077900B39124 /* AppDelegate.swift */; };
 		129F2DCB1D1F077900B39124 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F2DCA1D1F077900B39124 /* ViewController.swift */; };
 		129F2DCE1D1F077A00B39124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129F2DCC1D1F077A00B39124 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		01D87B271D1F37B10073341C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		126263C01D1F569100407A6E /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		129F2DC51D1F077900B39124 /* EventGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		129F2DC81D1F077900B39124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		129F2DCA1D1F077900B39124 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		129F2DDF1D1F303900B39124 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				126263C01D1F569100407A6E /* EventPageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				129F2DCB1D1F077900B39124 /* ViewController.swift in Sources */,
 				129F2DDE1D1F2C8200B39124 /* Event.swift in Sources */,
 				129F2DC91D1F077900B39124 /* AppDelegate.swift in Sources */,
+				126263C11D1F569100407A6E /* EventPageViewController.swift in Sources */,
 				01D87B281D1F37B10073341C /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

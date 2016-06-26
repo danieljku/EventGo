@@ -14,13 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var locationField: UITextField!
     @IBOutlet weak var costField: UITextField!
     @IBOutlet weak var eventDescriptionField: UITextView!
-    @IBOutlet weak var eventNameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var costLabel: UILabel!
-    @IBOutlet weak var descriptionTextView: UITextView!
 
-    var eventArr = [Event]()
+    
+    let event = Event()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,34 +38,22 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
-    /*
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let eventPageController = segue.destinationViewController as! EventPageController
         if segue.identifier == "EventPage"{
-            eventPageController.eventList = eventArr
-        }
-    }*/
+     }
+    }
     
-
-
     
     @IBAction func createEventButton(sender: AnyObject) {
-        let event = Event()
         event.eventName = eventNameField.text!
         event.eventDate = dateField.text!
         event.eventLocation = locationField.text!
         event.eventCost = costField.text!
         event.eventDescription = eventDescriptionField.text!
-        
-        eventArr.append(event)
-        
-        
-        self.eventNameLabel.text = String(eventNameField.text!)
-        self.dateLabel.text = String(dateField.text!)
-        self.locationLabel.text = String(locationField.text!)
-        self.costLabel.text = String(costField.text!)
-        self.descriptionTextView.text = String(eventDescriptionField.text!)
+
     }
     
     @IBAction func addImageButton(sender: AnyObject) {

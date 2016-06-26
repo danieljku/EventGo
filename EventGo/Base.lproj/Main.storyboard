@@ -395,7 +395,7 @@
         <!--Event Name-->
         <scene sceneID="3qm-ai-iOa">
             <objects>
-                <viewController id="2C9-15-HkN" customClass="ViewController" customModule="EventGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2C9-15-HkN" customClass="EventPageViewController" customModule="EventGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x9u-rG-ppz"/>
                         <viewControllerLayoutGuide type="bottom" id="LML-zX-2jy"/>
@@ -468,13 +468,15 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Event Name" id="hod-kR-uPk"/>
+                    <navigationItem key="navigationItem" title="Event Name" id="hod-kR-uPk">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QuT-cA-bYf"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="costLabel" destination="pij-2P-cMt" id="LdZ-UZ-op5"/>
-                        <outlet property="dateLabel" destination="IHA-CO-HwQ" id="JcR-bh-bRp"/>
-                        <outlet property="descriptionTextView" destination="DaT-fJ-MEO" id="m8N-fS-MfK"/>
-                        <outlet property="eventNameLabel" destination="QJr-D7-bMh" id="0ak-d3-Pts"/>
-                        <outlet property="locationLabel" destination="vH8-NO-6yJ" id="EPN-x1-hDJ"/>
+                        <outlet property="costLabel" destination="pij-2P-cMt" id="MS6-83-tPJ"/>
+                        <outlet property="dateLabel" destination="IHA-CO-HwQ" id="UqD-ed-2Rg"/>
+                        <outlet property="descriptionTextView" destination="DaT-fJ-MEO" id="QWD-Mf-dCi"/>
+                        <outlet property="eventNameLabel" destination="QJr-D7-bMh" id="cWX-rI-kav"/>
+                        <outlet property="locationLabel" destination="vH8-NO-6yJ" id="s07-eR-ceM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r88-XE-ilY" userLabel="First Responder" sceneMemberID="firstResponder"/>
