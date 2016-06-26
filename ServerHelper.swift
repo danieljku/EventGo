@@ -127,47 +127,6 @@ class ServerHelper {
         return
     }
     
-    static func retreiveEvents() {
-        
-        // Set up the request
-        let apiURL = NSURL(string: "STRINGHEREPLEASE")
-        let request = NSURLRequest(URL: apiURL!)
-        
-        // Create a task
-        let task = NSURLSession.sharedSession().dataTaskWithURL(request.URL!) {
-            (data, response, error) in
-            
-            if error == nil {
-                guard let data = data else { print("No data was returned by the request!"); return }
-                
-                let parsedResult: AnyObject!
-                
-                do {
-                    // Serialize means converting object to streams of bytes
-                    print(data)
-                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-                    
-                    print(parsedResult)
-                }
-                catch {
-                    print("Could not parse the data as JSON: '\(data)'")
-                    return
-                }
-                
-                if let dictionary = parsedResult["events"] {
-                    print(dictionary)
-                
-                    for each in dictionary as! [[String: String]] {
-                        print(each["userid"]!)
-                    }
-                }
-            }
-        }
-        
-        task.resume()
-        return
-    }
-    
     // Retreive events
     static var eventsRetreived: Bool!
     static func retreiveEvents() -> [Event] {
