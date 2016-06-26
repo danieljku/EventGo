@@ -23,8 +23,46 @@ class EventPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Reading from server
+        let apiURL = NSURL(string: "http://curtastic.com/eventtogo/?action=getevents")
+        
+        let request = NSURLRequest(URL: apiURL!)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ (data, response, error) in
+            
+            if error == nil {
+                guard let data = data else { print("No data was returned by the request!"); return }
+                
+                let parsedResult: AnyObject!
+                
+                do {
+                    // Serialize means converting object to streams of bytes
+                    print(data)
+                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                    
+                    print(parsedResult)
+                }
+                catch {
+                    print("Could not parse the data as JSON: '\(data)'")
+                    return
+                }
+                
+                if let dictionary = parsedResult["events"] {
+                    print(dictionary)
+                    
+                    for each in dictionary as! [[String : String]]{
+                        print(each["userid"])
+                    }
+                    
+                    return
+                }
+                
+            }
+        }
 
-        // Do any additional setup after loading the view.
+
+        //Retrieve data from ViewController and insert into text fields of the labels
         eventNameLabel.text = eventPage!.eventName
         dateLabel.text = eventPage!.eventDate
         addressLabel.text = eventPage!.eventAddress

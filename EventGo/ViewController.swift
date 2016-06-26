@@ -34,18 +34,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         pickerView.delegate = self
         
         stateField.inputView = pickerView
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        /*let apiURL = NSURL(string: "http://curtastic.com/eventtogo/?action=getevents")
-        
-        let request = NSURLRequest(URL: apiURL!)
-        
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ (data, response, error) in
-            
-            if error == nil {
-                
-            }
-        }*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -175,6 +163,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 return
             }
 
+            //Sends data to the Event Page
             eventPageViewController.eventPage?.eventName = eventNameField.text!
             eventPageViewController.eventPage?.eventDate = dateField.text!
             eventPageViewController.eventPage?.eventAddress = addressField.text!
