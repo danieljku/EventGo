@@ -66,6 +66,64 @@ class ServerHelper {
         }
         
         task.resume()
+        
+        while(ServerHelper.userLoggedIn == nil) {
+            //stall
+        }
+        
+        return
+    }
+    
+    // Create user
+    static var userCreated: Bool!
+    static func createUser(email: String!, password: String!, firstName: String!, lastName: String!) {
+        userCreated = nil
+        
+        // Set up the request
+        let str = String("http://curtastic.com/eventtogo/?action=adduser&email" + email + "&password" + password + "&firstname" + firstName + "&lastname" + lastName)
+        let apiURL = NSURL(string: str)
+        let request = NSURLRequest(URL: apiURL!)
+        
+        // Create a task
+        let task = NSURLSession.sharedSession().dataTaskWithURL(request.URL!) {
+            (data, response, error) in
+            
+            if error == nil {
+                guard let data = data else {
+                    print("No data was returned by the request!")
+                    userCreated = false
+                    return
+                }
+                
+                let parsedResult: AnyObject!
+                
+                do {
+                    // Serialize means converting object to streams of bytes
+                    print(data)
+                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                    
+                    print(parsedResult)
+                }
+                catch {
+                    print("Could not parse the data as JSON: '\(data)'")
+                    userCreated = false
+                    return
+                }
+                
+                if let dictionary = parsedResult["user"] {
+                    print(dictionary)
+                    if dictionary == nil {
+                        userCreated = false
+                    }
+                    else {
+                        userCreated = true
+                    }
+                    return
+                }
+            }
+        }
+        
+        task.resume()
         return
     }
     
@@ -107,6 +165,7 @@ class ServerHelper {
         }
         
         task.resume()
+        return
     }
     
     /*static func createUser(email: String!, password: String!, firstName: String!, lastName: String!) {

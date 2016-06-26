@@ -23,46 +23,30 @@ class SignInViewController: UIViewController {
         self.errorLabel.fadeOut(completion: {
             (finished: Bool) -> Void in
             
-            // Check username and password
-            /*ServerHelper.attemptLogIn(self.usernameField.text, password: self.passwordField.text)
-            while(ServerHelper.loading == true) {
-                
-                if(ServerHelper.userLoggedIn != true) {
-                    
-                }
-                else {
-                    if let loggedIn = ServerHelper.userLoggedIn {
-                        if loggedIn == true {
-                            self.errorLabel.textColor = errorGreenColor
-                            self.errorLabel.text = "Successfully signed in."
-                            // MOVE ON TO WINNIE'S MAPS!
-                        }
-                    }
-                    else {
-                        self.errorLabel.textColor = errorRedColor
-                        self.errorLabel.text = "The username or password is incorrect."
-                    }
-                }
-            }*/
-            
             ServerHelper.attemptLogIn(self.usernameField.text, password: self.passwordField.text)
-            while(ServerHelper.userLoggedIn == nil) {
-                //stall
-            }
-            print(ServerHelper.userLoggedIn)
             if(ServerHelper.userLoggedIn! == true) {
                 self.errorLabel.textColor = errorGreenColor
                 self.errorLabel.text = "Successfully signed in."
-                // MOVE ON TO WINNIE'S MAPS!
+                self.errorLabel.fadeIn(completion: {
+                    (finished: Bool) -> Void in
+                    self.performSegueWithIdentifier("MapSegue", sender: sender)
+                })
+                
+                //self.performSegueWithIdentifier("MapSegue", sender: sender)
+                
             }
             else {
                 self.errorLabel.textColor = errorRedColor
-                self.errorLabel.text = "The username or password is incorrect."
+                self.errorLabel.text = "The email or password is incorrect."
             }
             
             // Start fade in
             self.errorLabel.fadeIn()
         })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
     }
     
     @IBAction func signUpAction(sender: AnyObject) {
@@ -89,7 +73,7 @@ class SignInViewController: UIViewController {
 }
 
 extension UIView {
-    func fadeIn(duration: NSTimeInterval = 0.5, delay: NSTimeInterval = 0.0, completion: ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+    func fadeIn(duration: NSTimeInterval = 0.5, delay: NSTimeInterval = 0.0, completion: (Bool) -> Void = {(finished: Bool) -> Void in}) {
         UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.alpha = 1.0
             }, completion: completion)  }
