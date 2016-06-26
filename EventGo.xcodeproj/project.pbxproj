@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0192124B1D1F646C0072D614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019212491D1F646C0072D614 /* Main.storyboard */; };
+		0192124E1D1F69F20072D614 /* ServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0192124D1D1F69F20072D614 /* ServerHelper.swift */; };
 		01D87B281D1F37B10073341C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D87B271D1F37B10073341C /* SignInViewController.swift */; };
 		126263C11D1F569100407A6E /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126263C01D1F569100407A6E /* EventPageViewController.swift */; };
 		129F2DC91D1F077900B39124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F2DC81D1F077900B39124 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0192124A1D1F646C0072D614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0192124D1D1F69F20072D614 /* ServerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHelper.swift; sourceTree = "<group>"; };
 		01D87B271D1F37B10073341C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = EventGo/SignInViewController.swift; sourceTree = "<group>"; };
 		126263C01D1F569100407A6E /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		129F2DC51D1F077900B39124 /* EventGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,9 +43,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0192124C1D1F69CC0072D614 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0192124D1D1F69F20072D614 /* ServerHelper.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		129F2DBC1D1F077900B39124 = {
 			isa = PBXGroup;
 			children = (
+				0192124C1D1F69CC0072D614 /* Helper */,
 				129F2DDF1D1F303900B39124 /* Controller */,
 				129F2DDA1D1F2C3300B39124 /* Models */,
 				129F2DC71D1F077900B39124 /* EventGo */,
@@ -162,6 +173,7 @@
 			files = (
 				129F2DCB1D1F077900B39124 /* ViewController.swift in Sources */,
 				129F2DDE1D1F2C8200B39124 /* Event.swift in Sources */,
+				0192124E1D1F69F20072D614 /* ServerHelper.swift in Sources */,
 				129F2DC91D1F077900B39124 /* AppDelegate.swift in Sources */,
 				126263C11D1F569100407A6E /* EventPageViewController.swift in Sources */,
 				01D87B281D1F37B10073341C /* SignInViewController.swift in Sources */,
