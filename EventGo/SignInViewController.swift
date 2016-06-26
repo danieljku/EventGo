@@ -43,7 +43,7 @@ class SignInViewController: UIViewController {
     
     let apiURL = NSURL(string: "http://curtastic.com/eventtogo/?action=getevents")!
     
-    let request = NSURLRequest(URL: apiURL)
+    /*let request = NSURLRequest(URL: apiURL)
     
     
     // Create a task
@@ -77,7 +77,7 @@ class SignInViewController: UIViewController {
                 }
             }
         }
-    }
+    }*/
     
 }
 
