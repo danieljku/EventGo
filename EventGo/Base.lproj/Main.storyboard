@@ -34,13 +34,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-lu-ZDf">
-                                <rect key="frame" x="30" y="260" width="540" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-lu-ZDf">
+                                <rect key="frame" x="30" y="250" width="540" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bLx-XC-GV8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wyq-VT-GYM">
-                                <rect key="frame" x="30" y="310" width="540" height="30"/>
+                                <rect key="frame" x="30" y="310" width="540" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rWz-EN-BQ6"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -51,8 +57,8 @@
                                     <constraint firstAttribute="height" constant="250" id="P2T-ig-OnW"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-5a-c0Z">
-                                <rect key="frame" x="150" y="557" width="300" height="33"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-5a-c0Z">
+                                <rect key="frame" x="162" y="557" width="276" height="33"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVW-ra-HFK">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="33"/>
@@ -61,7 +67,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5C-Gw-Qni">
-                                        <rect key="frame" x="212" y="0.0" width="88" height="33"/>
+                                        <rect key="frame" x="211" y="0.0" width="65" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Sign Up."/>
                                         <connections>
@@ -70,12 +76,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="FJc-cE-eWl"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGG-Eg-9FF">
-                                <rect key="frame" x="277" y="360" width="47" height="30"/>
+                                <rect key="frame" x="277" y="370" width="47" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.29411764705882354" green="0.69411764705882351" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,10 +88,10 @@
                                     <action selector="signInAction:" destination="xiv-LJ-Ysh" eventType="touchUpInside" id="Wf1-1t-5KQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Dg-fKh">
-                                <rect key="frame" x="0.0" y="398" width="600" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-Dg-fKh">
+                                <rect key="frame" x="0.0" y="410" width="600" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.2627450980392157" green="0.62745098039215685" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.94509803921568625" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -100,7 +103,7 @@
                             <constraint firstItem="TUp-5a-c0Z" firstAttribute="centerX" secondItem="n6f-J9-mx6" secondAttribute="centerX" id="DKw-AT-Ni5"/>
                             <constraint firstItem="wyq-VT-GYM" firstAttribute="centerX" secondItem="n6f-J9-mx6" secondAttribute="centerX" id="KvV-Vi-w1h"/>
                             <constraint firstItem="wyq-VT-GYM" firstAttribute="leading" secondItem="n6f-J9-mx6" secondAttribute="leading" constant="30" id="Pm4-wx-lmn"/>
-                            <constraint firstItem="PXN-lu-ZDf" firstAttribute="top" secondItem="Lqi-8q-EBK" secondAttribute="bottom" constant="10" id="Qv5-qe-HnD"/>
+                            <constraint firstItem="PXN-lu-ZDf" firstAttribute="top" secondItem="Lqi-8q-EBK" secondAttribute="bottom" id="Qv5-qe-HnD"/>
                             <constraint firstItem="UOe-uq-i1i" firstAttribute="top" secondItem="TUp-5a-c0Z" secondAttribute="bottom" constant="10" id="RH2-uS-Nhf"/>
                             <constraint firstItem="YcR-Dg-fKh" firstAttribute="centerX" secondItem="n6f-J9-mx6" secondAttribute="centerX" id="Rxz-52-013"/>
                             <constraint firstAttribute="trailing" secondItem="PXN-lu-ZDf" secondAttribute="trailing" constant="30" id="TxX-Cc-hlD"/>

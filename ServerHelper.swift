@@ -48,6 +48,7 @@ class ServerHelper {
         }
     }
     
+    // Try to log in
     static func attemptLogin(email: String!, password: String!) -> Bool {
         
         var loggedIn = false
@@ -86,18 +87,15 @@ class ServerHelper {
                 
                 if let dictionary = parsedResult["user"] {
                     print(dictionary)
-                
-                    for each in dictionary as! [[String: String]] {
-                        print(each["email"]!)
-                    }
-                    
                     loggedIn = true
+                    print("IN THE TASK")
+                    return
                 }
             }
         }
         
         task.resume()
-        
+        print("BEFORE THE RESUME")
         return loggedIn
     }
 }
