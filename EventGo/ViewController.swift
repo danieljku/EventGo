@@ -54,17 +54,17 @@ class ViewController: UIViewController {
             eventPageViewController.eventPage?.eventAddress = addressField.text!
             eventPageViewController.eventPage?.eventCity = cityField.text!
             eventPageViewController.eventPage?.eventState = stateField.text!
-            eventPageViewController.eventPage?.eventZipCode = zipCodeField.text!
-            eventPageViewController.eventPage?.eventCost = costField.text!
+            eventPageViewController.eventPage?.eventZipCode = Int(zipCodeField.text!)!
+            eventPageViewController.eventPage?.eventCost = Double(costField.text!)!
             eventPageViewController.eventPage?.eventDescription = eventDescriptionField.text!
      }
     }
     
     
     @IBAction func createEventButton(sender: AnyObject) {
-        //guard let eventName = eventNameField.text{
+        guard let eventName = String(eventNameField.text!) else{
             
-        //}
+        }
 
     }
     

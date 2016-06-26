@@ -9,16 +9,14 @@
 import Foundation
 
 class Event{
-    var eventName = "HI"
+    var eventName = ""
     var eventDate = ""
     var eventAddress = ""
     var eventCity = ""
     var eventState = ""
-    var eventZipCode = ""
-    var eventCost = ""
+    var eventZipCode = 0
+    var eventCost = 0.0
     var eventDescription = ""
     
     var imageFile = ""
-    
-    
 }
