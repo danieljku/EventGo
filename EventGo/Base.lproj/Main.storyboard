@@ -884,8 +884,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
-                                <rect key="frame" x="10" y="342" width="580" height="408"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
+                                <rect key="frame" x="10" y="342" width="580" height="208"/>
                                 <color key="backgroundColor" red="0.84818799083769636" green="0.84818799083769636" blue="0.84818799083769636" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
  
