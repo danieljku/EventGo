@@ -112,18 +112,16 @@ class ServerHelper {
                 
                 if let dictionary = parsedResult["user"] {
                     print(dictionary)
-                    if dictionary == nil {
-                        userCreated = false
-                    }
-                    else {
-                        userCreated = true
-                    }
+                    userCreated = true
                     return
                 }
             }
         }
         
         task.resume()
+        while(ServerHelper.userCreated == nil) {
+            //stall
+        }
         return
     }
     

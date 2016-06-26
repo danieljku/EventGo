@@ -26,10 +26,10 @@ class SignUpViewController: UIViewController {
             if self.firstNameField.text == nil || self.firstNameField.text == "" || self.lastNameField.text == nil || self.lastNameField.text == "" {
                 self.errorLabel.textColor = self.errorRedColor
                 self.errorLabel.text = "Please enter a first and last name."
+                self.errorLabel.fadeIn()
             }
             else {
-                self.errorLabel.textColor = self.errorGreenColor
-                self.errorLabel.text = "Continuing on!"
+                self.performSegueWithIdentifier("ContinueSegue", sender: sender)
             }
             
             // Start fade in
@@ -37,8 +37,12 @@ class SignUpViewController: UIViewController {
         })
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "ContinueSegue") {
+            let view = segue.destinationViewController as! SignUpContinuedViewController
+            view.firstName = self.firstNameField.text!
+            view.lastName = self.lastNameField.text!
+        }
     }
     
     //Calls this function when the tap is recognized.
