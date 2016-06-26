@@ -11,8 +11,8 @@ import UIKit
 
 class SignUpContinuedViewController: UIViewController {
     
-    var firstName: String!
-    var lastName: String!
+    static var firstName: String!
+    static var lastName: String!
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -20,7 +20,7 @@ class SignUpContinuedViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     @IBAction func completeAction(sender: AnyObject) {
-        //do stuff
+        //print(self.firstName + self.lastName + emailField.text + passwordField.text + confirmPasswordField.text)
     }
     
     func dismissKeyboard() {
@@ -38,5 +38,10 @@ class SignUpContinuedViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+    }
+    
+    static func continueFromSignUp(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
     }
 }

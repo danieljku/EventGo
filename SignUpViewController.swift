@@ -30,6 +30,7 @@ class SignUpViewController: UIViewController {
             else {
                 self.errorLabel.textColor = self.errorGreenColor
                 self.errorLabel.text = "Continuing on!"
+                SignUpContinuedViewController.continueFromSignUp(self.firstNameField.text!, lastName: self.lastNameField.text!)
             }
             
             // Start fade in
