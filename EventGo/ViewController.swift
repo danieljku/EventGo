@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextViewDelegate {
     @IBOutlet weak var eventNameField: UITextField!
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var addressField: UITextField!
@@ -34,6 +34,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         pickerView.delegate = self
         
         stateField.inputView = pickerView
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        eventDescriptionField.delegate = self
+        eventDescriptionField.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
+        eventDescriptionField.layer.borderWidth = 1.0
+        eventDescriptionField.layer.cornerRadius = 5
+        
+        
+
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -76,7 +76,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let apiURL = NSURL(string: "http://curtastic.com/eventtogo/?action=getevents")
         let request = NSURLRequest(URL: apiURL!)
         
-        print("BB")
         // Create a task
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             
