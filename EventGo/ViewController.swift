@@ -148,9 +148,6 @@ class ViewController: UIViewController {
                 return
             }
 
-
-            
-            
             eventPageViewController.eventPage?.eventName = eventNameField.text!
             eventPageViewController.eventPage?.eventDate = dateField.text!
             eventPageViewController.eventPage?.eventAddress = addressField.text!

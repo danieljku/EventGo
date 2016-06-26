@@ -25,7 +25,6 @@ class EventPageViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         eventNameLabel.text = eventPage!.eventName
         dateLabel.text = eventPage!.eventDate
         addressLabel.text = eventPage!.eventAddress
