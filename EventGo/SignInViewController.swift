@@ -17,7 +17,7 @@ class SignInViewController: UIViewController {
     @IBAction func signInAction(sender: AnyObject) {
         
         let errorRedColor = UIColor(red: 241/255, green: 0/255, blue: 0/255, alpha: 255/255)
-        let errorGreenColor = UIColor(red: 141/255, green: 241/255, blue: 50/255, alpha: 255/255)
+        let errorGreenColor = UIColor(red: 67/255, green: 160/255, blue: 157/255, alpha: 255/255)
         
         // Start fade out
         self.errorLabel.fadeOut(completion: {
@@ -28,7 +28,7 @@ class SignInViewController: UIViewController {
                 if let pass = self.passwordField.text {
                     if user == "user" && pass == "pass" {
                         self.errorLabel.textColor = errorGreenColor
-                        self.errorLabel.text = "Successfully logged in."
+                        self.errorLabel.text = "Successfully signed in."
                     }
                     else {
                         self.errorLabel.textColor = errorRedColor
