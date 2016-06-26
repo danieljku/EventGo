@@ -244,14 +244,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func createEventButton(sender: AnyObject) {
+        ServerHelper.createEvent(eventNameField.text, street: addressField.text, city: cityField.text, state: stateField.text, Zip: zipCodeField.text, startTime: "1466934686794", userId: "1", description: eventDescriptionField.text)
+        
+        self.performSegueWithIdentifier("CreateEventSegue", sender: sender)
     }
     
     @IBAction func addImageButton(sender: AnyObject) {
         print("choose photo")
-        ServerHelper.createEvent(eventNameField.text, street: addressField.text, city: cityField.text, state: stateField.text, Zip: zipCodeField.text, startTime: "1466934686794", userId: "1", description: eventDescriptionField.text)
     }
     
-    
+    /*override func performSegueWithIdentifier(identifier: String, sender: AnyObject?) {
+        //if identifier == "CreateEventSegue"
+    }*/
     
 }
 

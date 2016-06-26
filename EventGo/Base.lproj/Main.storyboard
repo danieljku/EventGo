@@ -578,6 +578,7 @@
                         <outlet property="imageView" destination="pa2-wo-QyG" id="50F-ro-QSf"/>
                         <outlet property="stateField" destination="HMB-a0-eUv" id="nf8-Pl-gyh"/>
                         <outlet property="zipCodeField" destination="hXc-Aq-Scn" id="Isd-e2-lsS"/>
+                        <segue destination="ntZ-4c-9br" kind="show" identifier="CreateEventDoneSegue" id="nGl-is-7Hq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -766,7 +767,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="apg-nX-iaN">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="apg-nX-iaN" id="VYq-79-HqV">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -791,8 +792,9 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
         <image name="backgroundLogin" width="760" height="405"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ho3-aG-iuN"/>
-        <segue reference="K8D-30-FWU"/>
         <segue reference="qi5-IW-BeM"/>
+        <segue reference="K8D-30-FWU"/>
+        <segue reference="nGl-is-7Hq"/>
+        <segue reference="Ho3-aG-iuN"/>
     </inferredMetricsTieBreakers>
 </document>
