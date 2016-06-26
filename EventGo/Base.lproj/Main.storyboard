@@ -731,6 +731,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                         <outlet property="eventNameLabel" destination="QJr-D7-bMh" id="cWX-rI-kav"/>
                         <outlet property="stateLabel" destination="xiH-bL-3DW" id="sof-BP-Kz4"/>
                         <outlet property="zipCodeLabel" destination="iln-tF-nzX" id="cRY-aW-gaM"/>
+                        <segue destination="ntZ-4c-9br" kind="show" identifier="CreateEventSegue" id="6u2-ca-lXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r88-XE-ilY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -774,8 +775,9 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
         <image name="backgroundLogin" width="760" height="405"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K8D-30-FWU"/>
         <segue reference="qi5-IW-BeM"/>
+        <segue reference="K8D-30-FWU"/>
+        <segue reference="8pn-TL-zoY"/>
         <segue reference="Ho3-aG-iuN"/>
     </inferredMetricsTieBreakers>
 </document>

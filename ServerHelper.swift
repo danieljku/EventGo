@@ -196,9 +196,7 @@ class ServerHelper {
     static var eventCreated: Bool!
     static func createEvent(name: String!, street: String!, city: String!, state: String!, Zip: String!, startTime: String!, userId: String!, description: String!) {
         eventCreated = nil
-        
-        // Set up the request
-        let str = String("http://curtastic.com/eventtogo/?action=addevent&name=" + name + "&street=" + street + "&city=" + city + "&state=" + state + "&zip=" + Zip + "&starttime=" + startTime + "&userid=" + userId + "&description=" + description)
+        let str = String("http://curtastic.com/eventtogo/?action=addevent&name=" + name + "&street=" + street + "&city=" + city + "&state=" + state + "&zip=" + Zip + "&starttime=" + "1466934686794" + "&userid=" + "1" + "&description=" + description)
         let apiURL = NSURL(string: str)
         let request = NSURLRequest(URL: apiURL!)
         
@@ -238,9 +236,10 @@ class ServerHelper {
         }
         
         task.resume()
-        while(ServerHelper.userCreated == nil) {
-            //stall
-        }
+
+        print("Before stall")
+        print("After stall")
+
         return
     }
     
