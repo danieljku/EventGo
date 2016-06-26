@@ -324,11 +324,11 @@
                                     <action selector="addImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RTY-T0-7k1"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wma-9s-Hmk" userLabel="SUPPPPER Stack View">
-                                <rect key="frame" x="20" y="218" width="560" height="347"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wma-9s-Hmk" userLabel="SUPPPPER Stack View">
+                                <rect key="frame" x="20" y="202" width="560" height="367"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vrM-vt-Mf1" userLabel="Super Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="297"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="317"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-i4-9Sv" userLabel="Event Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -505,10 +505,10 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="DESCRIPTION FILL OUT!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GWK-Tf-5My">
-                                                <rect key="frame" x="0.0" y="247" width="560" height="50"/>
+                                                <rect key="frame" x="0.0" y="247" width="560" height="70"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Gja-j1-l8o"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Gja-j1-l8o"/>
                                                     <constraint firstAttribute="width" constant="500" id="deW-Id-ZMR"/>
                                                 </constraints>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -536,7 +536,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2S-IX-o5C">
-                                        <rect key="frame" x="0.0" y="317" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="337" width="560" height="30"/>
                                         <state key="normal" title="Create Event"/>
                                         <connections>
                                             <segue destination="2C9-15-HkN" kind="show" identifier="EventPage" id="YA8-Xb-r7M"/>
@@ -645,13 +645,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiH-bL-3DW">
-                                <rect key="frame" x="46" y="299" width="73" height="21"/>
+                                <rect key="frame" x="46" y="292" width="39" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zip Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iln-tF-nzX">
-                                <rect key="frame" x="46" y="321" width="95" height="25"/>
+                                <rect key="frame" x="93" y="290" width="95" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
