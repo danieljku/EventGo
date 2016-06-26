@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     var eventList = Event()
 
+    //var pictureAddHelper: PictureAddHelper?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +70,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addImageButton(sender: AnyObject) {
-        
-        
+        print("choose photo")
+        //pictureAddHelper!.showPhotoSourceSelection()
     }
     
     
