@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var eventNameField: UITextField!
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var addressField: UITextField!
@@ -19,10 +19,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var zipCodeField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
+    var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
+                  "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Lousiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+    
     //var pictureAddHelper: PictureAddHelper?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        super.viewDidLoad()
+        
+        let pickerView = UIPickerView()
+        
+        pickerView.delegate = self
+        
+        stateField.inputView = pickerView
+        
         // Do any additional setup after loading the view, typically from a nib.
         /*let apiURL = NSURL(string: "http://curtastic.com/eventtogo/?action=getevents")
         
@@ -41,6 +53,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return states.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return states[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        stateField.text = states[row]
+    }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -157,6 +184,28 @@ class ViewController: UIViewController {
             eventPageViewController.eventPage?.eventCost = Double(costField.text!)!
             eventPageViewController.eventPage?.eventDescription = eventDescriptionField.text!
      }
+    }
+    
+    @IBAction func dataField(sender: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        
+        let dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        dateField.text = dateFormatter.stringFromDate(sender.date)
+        
     }
     
     @IBAction func createEventButton(sender: AnyObject) {

@@ -339,6 +339,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="dataField:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="X7Q-sV-Vk2"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -539,7 +542,7 @@
                         <outlet property="addressField" destination="v8o-nc-ZmV" id="vJz-sV-16h"/>
                         <outlet property="cityField" destination="Ede-Ya-nvU" id="BBn-CB-fKK"/>
                         <outlet property="costField" destination="SrW-f1-Ukz" id="MK4-l9-gRW"/>
-                        <outlet property="dateField" destination="kOP-Im-oWO" id="JES-Q6-Dg0"/>
+                        <outlet property="dateField" destination="kOP-Im-oWO" id="PvT-Du-Ost"/>
                         <outlet property="eventDescriptionField" destination="GWK-Tf-5My" id="tpg-2s-XfJ"/>
                         <outlet property="eventNameField" destination="z2s-ci-Lgw" id="pel-Hw-sst"/>
                         <outlet property="imageView" destination="pa2-wo-QyG" id="50F-ro-QSf"/>

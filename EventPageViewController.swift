@@ -31,7 +31,7 @@ class EventPageViewController: UIViewController {
         stateLabel.text = eventPage!.eventState
         cityLabel.text = eventPage!.eventCity
         zipCodeLabel.text = String(eventPage!.eventZipCode)
-        costLabel.text = String(eventPage!.eventCost)
+        costLabel.text = "$" + String(eventPage!.eventCost)
         descriptionTextView.text = eventPage!.eventDescription
 
         
