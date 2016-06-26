@@ -629,11 +629,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
                                 <rect key="frame" x="10" y="347" width="580" height="203"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
+                                <string key="text">AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
  
 Known as pioneers of global hackathons for more than four years, AngelHack’s more than 97,000 developers, designers, and entrepreneurs compete to build, test and launch new solutions over the course of a weekend.AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
  
-Known as pioneers of global hackathons for more than four years, AngelHack’s more than 97,000 developers, designers, and entrepreneurs compete to build, test and launch new solutions over the course of a weekend.</mutableString>
+Known as pioneers of global hackathons for more than four years, AngelHack’s more than 97,000 developers, designers, and entrepreneurs compete to build, test and launch new solutions over the course of a weekend.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

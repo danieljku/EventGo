@@ -27,16 +27,21 @@ class SignInViewController: UIViewController {
             ServerHelper.attemptLogIn(self.usernameField.text, password: self.passwordField.text)
             while(ServerHelper.loading == true) {
                 
-                if let loggedIn = ServerHelper.userLoggedIn {
-                    if loggedIn == true {
-                        self.errorLabel.textColor = errorGreenColor
-                        self.errorLabel.text = "Successfully signed in."
-                        // MOVE ON TO WINNIE'S MAPS!
-                    }
+                if(ServerHelper.userLoggedIn == false) {
+                    
                 }
                 else {
-                    self.errorLabel.textColor = errorRedColor
-                    self.errorLabel.text = "The username or password is incorrect."
+                    if let loggedIn = ServerHelper.userLoggedIn {
+                        if loggedIn == true {
+                            self.errorLabel.textColor = errorGreenColor
+                            self.errorLabel.text = "Successfully signed in."
+                            // MOVE ON TO WINNIE'S MAPS!
+                        }
+                    }
+                    else {
+                        self.errorLabel.textColor = errorRedColor
+                        self.errorLabel.text = "The username or password is incorrect."
+                    }
                 }
             }
             
