@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Sign Up Continued View Controller-->
@@ -457,8 +456,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-K3-FgD">
                                 <rect key="frame" x="0.0" y="192" width="600" height="608"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rns-MH-CL0" userLabel="SUPPPPER Stack View">
-                                        <rect key="frame" x="20" y="10" width="145" height="519"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rns-MH-CL0" userLabel="SUPPPPER Stack View">
+                                        <rect key="frame" x="228" y="44" width="145" height="519"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="oHU-hG-gXJ" userLabel="Super Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="469"/>
@@ -468,105 +467,41 @@
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNj-of-xe8">
                                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="uCr-G7-7pD"/>
-                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="uCr-G7-7pD"/>
-                                                                    </mask>
-                                                                </variation>
                                                             </textField>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="mNj-of-xe8" secondAttribute="trailing" id="OkN-hr-eh6"/>
-                                                        </constraints>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="OkN-hr-eh6"/>
-                                                            </mask>
-                                                        </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaL-hv-enJ" userLabel="Date Stack View">
                                                         <rect key="frame" x="0.0" y="51" width="145" height="30"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date &amp; Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVq-UE-FRg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="BzM-89-JV0"/>
-                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="BzM-89-JV0"/>
-                                                                    </mask>
-                                                                </variation>
                                                                 <connections>
                                                                     <action selector="dataField:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="3V7-gh-YSN"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="sVq-UE-FRg" secondAttribute="trailing" id="Hra-Cr-iee"/>
-                                                            <constraint firstItem="sVq-UE-FRg" firstAttribute="leading" secondItem="DaL-hv-enJ" secondAttribute="leading" id="QNy-ll-d7q"/>
-                                                        </constraints>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="Hra-Cr-iee"/>
-                                                                <exclude reference="QNy-ll-d7q"/>
-                                                            </mask>
-                                                        </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQp-1t-6XU" userLabel="Address Stack View">
                                                         <rect key="frame" x="0.0" y="102" width="145" height="30"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ln-b1-PIn" userLabel="Address Field">
                                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="jRg-OB-gha"/>
-                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="jRg-OB-gha"/>
-                                                                    </mask>
-                                                                </variation>
                                                             </textField>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="2Ln-b1-PIn" secondAttribute="trailing" id="KCl-yg-MF0"/>
-                                                            <constraint firstAttribute="trailing" secondItem="2Ln-b1-PIn" secondAttribute="trailing" id="Ya0-Us-tmq"/>
-                                                            <constraint firstItem="2Ln-b1-PIn" firstAttribute="leading" secondItem="cQp-1t-6XU" secondAttribute="leading" id="pRs-qp-zFz"/>
-                                                            <constraint firstAttribute="trailing" secondItem="2Ln-b1-PIn" secondAttribute="trailing" id="zrN-15-ztH"/>
-                                                        </constraints>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="KCl-yg-MF0"/>
-                                                                <exclude reference="Ya0-Us-tmq"/>
-                                                                <exclude reference="pRs-qp-zFz"/>
-                                                                <exclude reference="zrN-15-ztH"/>
-                                                            </mask>
-                                                        </variation>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wd8-5a-arV" userLabel="City Stack View">
                                                         <rect key="frame" x="0.0" y="153" width="145" height="30"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qt-za-QtA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="CgM-ML-HYJ"/>
-                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="CgM-ML-HYJ"/>
-                                                                    </mask>
-                                                                </variation>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -575,16 +510,8 @@
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HMB-a0-eUv">
                                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="EXM-9K-msL"/>
-                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="EXM-9K-msL"/>
-                                                                    </mask>
-                                                                </variation>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -593,16 +520,8 @@
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-Aq-Scn">
                                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="Qyn-Yd-0wJ"/>
-                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="Qyn-Yd-0wJ"/>
-                                                                    </mask>
-                                                                </variation>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -611,16 +530,8 @@
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRH-F2-6ad">
                                                                 <rect key="frame" x="0.0" y="0.0" width="145" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="sBn-Gt-u4X"/>
-                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <variation key="default">
-                                                                    <mask key="constraints">
-                                                                        <exclude reference="sBn-Gt-u4X"/>
-                                                                    </mask>
-                                                                </variation>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -640,16 +551,10 @@
                                                         <color key="backgroundColor" red="0.84818799079999996" green="0.84818799079999996" blue="0.84818799079999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="70" id="Kz0-00-2Zr"/>
-                                                            <constraint firstAttribute="width" constant="500" id="xnN-SS-pZj"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="xnN-SS-pZj"/>
-                                                            </mask>
-                                                        </variation>
                                                     </textView>
                                                 </subviews>
                                                 <constraints>
@@ -681,52 +586,14 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="yUM-MS-DEO" firstAttribute="leading" secondItem="Rns-MH-CL0" secondAttribute="leading" id="3Md-Xh-Tht"/>
-                                            <constraint firstAttribute="bottom" secondItem="yUM-MS-DEO" secondAttribute="bottom" id="C2T-l8-ryn"/>
-                                            <constraint firstAttribute="trailing" secondItem="oHU-hG-gXJ" secondAttribute="trailing" id="FSf-HI-jNi"/>
-                                            <constraint firstAttribute="trailing" secondItem="yUM-MS-DEO" secondAttribute="trailing" id="UDr-VY-b9J"/>
-                                            <constraint firstItem="yUM-MS-DEO" firstAttribute="top" secondItem="oHU-hG-gXJ" secondAttribute="bottom" id="a3P-Zo-Kh7"/>
-                                            <constraint firstAttribute="trailing" secondItem="yUM-MS-DEO" secondAttribute="trailing" id="aQ2-Kh-IK0"/>
-                                            <constraint firstItem="yUM-MS-DEO" firstAttribute="leading" secondItem="Rns-MH-CL0" secondAttribute="leading" id="tzs-F6-Xso"/>
-                                            <constraint firstItem="oHU-hG-gXJ" firstAttribute="leading" secondItem="Rns-MH-CL0" secondAttribute="leading" id="ySh-Jk-j6X"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="FSf-HI-jNi"/>
-                                                <exclude reference="ySh-Jk-j6X"/>
-                                                <exclude reference="3Md-Xh-Tht"/>
-                                                <exclude reference="C2T-l8-ryn"/>
-                                                <exclude reference="UDr-VY-b9J"/>
-                                                <exclude reference="a3P-Zo-Kh7"/>
-                                                <exclude reference="aQ2-Kh-IK0"/>
-                                                <exclude reference="tzs-F6-Xso"/>
-                                            </mask>
-                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Rns-MH-CL0" secondAttribute="trailing" constant="20" id="30K-Qf-QeA"/>
-                                    <constraint firstAttribute="trailing" secondItem="Rns-MH-CL0" secondAttribute="trailing" constant="20" id="DUF-3H-OO7"/>
-                                    <constraint firstItem="Rns-MH-CL0" firstAttribute="top" secondItem="dbm-K3-FgD" secondAttribute="top" constant="10" id="G3s-CI-Ez7"/>
-                                    <constraint firstAttribute="bottom" secondItem="Rns-MH-CL0" secondAttribute="bottom" constant="10" id="Tt8-Xu-yWd"/>
-                                    <constraint firstItem="Rns-MH-CL0" firstAttribute="top" secondItem="dbm-K3-FgD" secondAttribute="top" constant="10" id="TuL-EO-yLz"/>
-                                    <constraint firstAttribute="trailing" secondItem="Rns-MH-CL0" secondAttribute="trailing" constant="20" id="elY-7i-BdG"/>
-                                    <constraint firstAttribute="trailing" secondItem="Rns-MH-CL0" secondAttribute="trailing" constant="20" id="p8a-DP-n9Q"/>
-                                    <constraint firstItem="Rns-MH-CL0" firstAttribute="leading" secondItem="dbm-K3-FgD" secondAttribute="leading" constant="20" id="qW7-1H-mHj"/>
-                                    <constraint firstAttribute="bottom" secondItem="Rns-MH-CL0" secondAttribute="bottom" constant="279" id="qd9-dN-YM5"/>
-                                    <constraint firstItem="Rns-MH-CL0" firstAttribute="leading" secondItem="dbm-K3-FgD" secondAttribute="leading" constant="20" id="zGj-yH-4dD"/>
+                                    <constraint firstItem="Rns-MH-CL0" firstAttribute="top" secondItem="dbm-K3-FgD" secondAttribute="top" constant="10" id="0e1-P7-j9k"/>
+                                    <constraint firstItem="Rns-MH-CL0" firstAttribute="leading" secondItem="dbm-K3-FgD" secondAttribute="leading" constant="20" id="DuX-6G-o7b"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rns-MH-CL0" secondAttribute="trailing" constant="20" id="JPO-00-yDw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rns-MH-CL0" secondAttribute="bottom" constant="10" id="QiA-V0-c2N"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="30K-Qf-QeA"/>
-                                        <exclude reference="DUF-3H-OO7"/>
-                                        <exclude reference="G3s-CI-Ez7"/>
-                                        <exclude reference="Tt8-Xu-yWd"/>
-                                        <exclude reference="p8a-DP-n9Q"/>
-                                        <exclude reference="zGj-yH-4dD"/>
-                                    </mask>
-                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -735,23 +602,13 @@
                             <constraint firstItem="dbm-K3-FgD" firstAttribute="top" secondItem="5aV-2i-dGm" secondAttribute="bottom" id="18f-xY-hct"/>
                             <constraint firstItem="dbm-K3-FgD" firstAttribute="top" secondItem="pa2-wo-QyG" secondAttribute="bottom" id="5tP-ms-R8D"/>
                             <constraint firstAttribute="trailing" secondItem="5aV-2i-dGm" secondAttribute="trailing" id="Bt7-oH-wWI"/>
-                            <constraint firstItem="pa2-wo-QyG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Cdt-Nf-AhZ"/>
-                            <constraint firstItem="dbm-K3-FgD" firstAttribute="top" secondItem="pa2-wo-QyG" secondAttribute="bottom" id="N1c-G2-gTj"/>
                             <constraint firstItem="dbm-K3-FgD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TzS-n0-zOm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dbm-K3-FgD" secondAttribute="bottom" id="Vf9-fr-fsR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dbm-K3-FgD" secondAttribute="bottom" id="XVr-Y0-pSo"/>
                             <constraint firstItem="pa2-wo-QyG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cdw-5P-PVE"/>
                             <constraint firstAttribute="trailing" secondItem="dbm-K3-FgD" secondAttribute="trailing" id="jF9-7x-pll"/>
                             <constraint firstAttribute="trailing" secondItem="pa2-wo-QyG" secondAttribute="trailing" id="mZY-w4-VYW"/>
                             <constraint firstItem="5aV-2i-dGm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="zzg-Uh-sSX"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Cdt-Nf-AhZ"/>
-                                <exclude reference="N1c-G2-gTj"/>
-                                <exclude reference="Vf9-fr-fsR"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Create Event" id="cnf-5x-kbF"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -899,7 +756,6 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="QJr-D7-bMh" secondAttribute="trailing" constant="10" id="17c-Jf-Iad"/>
-                            <constraint firstItem="QJr-D7-bMh" firstAttribute="centerX" secondItem="kVp-Rp-wOv" secondAttribute="centerX" id="DBQ-hN-vMG"/>
                             <constraint firstItem="DaT-fJ-MEO" firstAttribute="top" secondItem="2pG-7d-ICZ" secondAttribute="bottom" constant="13" id="Dex-ef-SXv"/>
                             <constraint firstItem="DaT-fJ-MEO" firstAttribute="trailing" secondItem="ZX8-HK-Iqg" secondAttribute="trailing" id="OSn-vR-Se2"/>
                             <constraint firstItem="ZX8-HK-Iqg" firstAttribute="centerX" secondItem="kVp-Rp-wOv" secondAttribute="centerX" id="R14-8q-ylY"/>
@@ -913,7 +769,6 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                             <constraint firstAttribute="trailing" secondItem="IFv-tG-xFl" secondAttribute="trailing" id="jmI-fy-dZ0"/>
                             <constraint firstItem="QJr-D7-bMh" firstAttribute="top" secondItem="IFv-tG-xFl" secondAttribute="bottom" constant="10" id="mgb-9Z-Ak5"/>
                             <constraint firstItem="DaT-fJ-MEO" firstAttribute="top" secondItem="2pG-7d-ICZ" secondAttribute="bottom" constant="13" id="rpj-iO-n9N"/>
-                            <constraint firstItem="LML-zX-2jy" firstAttribute="top" secondItem="DaT-fJ-MEO" secondAttribute="bottom" constant="50" id="sjW-Jn-0iJ"/>
                             <constraint firstItem="QJr-D7-bMh" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" constant="10" id="v3z-GR-218"/>
                             <constraint firstItem="ZX8-HK-Iqg" firstAttribute="top" secondItem="DaT-fJ-MEO" secondAttribute="bottom" constant="15" id="wrl-nH-wjX"/>
                             <constraint firstItem="ZX8-HK-Iqg" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" constant="10" id="x2O-VE-ce0"/>
@@ -921,8 +776,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="DBQ-hN-vMG"/>
-                                <exclude reference="sjW-Jn-0iJ"/>
+                                <exclude reference="Dex-ef-SXv"/>
                             </mask>
                         </variation>
                     </view>
@@ -951,6 +805,6 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K8D-30-FWU"/>
-        <segue reference="qi5-IW-BeM"/>
+        <segue reference="gpb-hF-HlW"/>
     </inferredMetricsTieBreakers>
 </document>
