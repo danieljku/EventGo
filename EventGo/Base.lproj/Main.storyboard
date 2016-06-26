@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sat-Vx-ZtH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xiv-LJ-Ysh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -134,7 +134,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22a-ZE-T5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-168" y="-244"/>
+            <point key="canvasLocation" x="-207" y="-200"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="kr8-m3-0c0">
@@ -758,7 +758,15 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
+                        <outlet property="addressField" destination="2Ln-b1-PIn" id="Nmu-b7-4mA"/>
+                        <outlet property="cityField" destination="1qt-za-QtA" id="Nwi-LF-Dd2"/>
+                        <outlet property="costField" destination="oRH-F2-6ad" id="TfU-Hi-gF3"/>
+                        <outlet property="dateField" destination="DaL-hv-enJ" id="Srf-DV-ZQL"/>
+                        <outlet property="eventDescriptionField" destination="CnP-nr-GCi" id="t9D-G4-BQ7"/>
+                        <outlet property="eventNameField" destination="oHU-hG-gXJ" id="M0d-pu-q9F"/>
                         <outlet property="imageView" destination="pa2-wo-QyG" id="50F-ro-QSf"/>
+                        <outlet property="stateField" destination="HMB-a0-eUv" id="nf8-Pl-gyh"/>
+                        <outlet property="zipCodeField" destination="hXc-Aq-Scn" id="Isd-e2-lsS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -948,6 +956,6 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K8D-30-FWU"/>
-        <segue reference="gpb-hF-HlW"/>
+        <segue reference="qi5-IW-BeM"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,14 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    @IBOutlet weak var eventNameField: UITextField!
-    @IBOutlet weak var dateField: UITextField!
+    @IBOutlet weak var eventNameField: UIStackView!
+    @IBOutlet weak var dateField: UIStackView!
     @IBOutlet weak var addressField: UITextField!
-    @IBOutlet weak var costField: UITextField!
-    @IBOutlet weak var eventDescriptionField: UITextView!
     @IBOutlet weak var cityField: UITextField!
     @IBOutlet weak var stateField: UITextField!
     @IBOutlet weak var zipCodeField: UITextField!
+    @IBOutlet weak var costField: UITextField!
+    @IBOutlet weak var eventDescriptionField: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
     var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
