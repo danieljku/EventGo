@@ -90,12 +90,14 @@ class ServerHelper {
                     loggedIn = true
                     print("IN THE TASK")
                     return
+                    //return true
                 }
             }
         }
         
+        print("BEFORE THE TASK")
         task.resume()
-        print("BEFORE THE RESUME")
+        print("AFTER THE TASK")
         return loggedIn
     }
 }

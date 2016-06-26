@@ -56,15 +56,22 @@ class SignInViewController: UIViewController {
         
     }
     
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Remove keyboard on tap
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        
         // Change text of certain things
         errorLabel.text = ""
+        
+        // Make keyboard go down when tapped outside
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
     }
 }
 
@@ -78,13 +85,5 @@ extension UIView {
         UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.alpha = 0.0
             }, completion: completion)
-    }
-}
-
-extension UIViewController {
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
     }
 }
