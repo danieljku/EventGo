@@ -24,7 +24,17 @@ class SignInViewController: UIViewController {
             (finished: Bool) -> Void in
             
             // Check username and password
-            if let user = self.usernameField.text {
+            if(ServerHelper.attemptLogin(self.usernameField.text, password: self.passwordField.text)) {
+                self.errorLabel.textColor = errorGreenColor
+                self.errorLabel.text = "Successfully signed in."
+                // MOVE ON TO WINNIE'S MAPS!
+            }
+            else {
+                self.errorLabel.textColor = errorRedColor
+                self.errorLabel.text = "The username or password is incorrect."
+            }
+            
+            /*if let user = self.usernameField.text {
                 if let pass = self.passwordField.text {
                     if user == "user" && pass == "pass" {
                         self.errorLabel.textColor = errorGreenColor
@@ -35,7 +45,7 @@ class SignInViewController: UIViewController {
                         self.errorLabel.text = "The username or password is incorrect."
                     }
                 }
-            }
+            }*/
             
             // Start fade in
             self.errorLabel.fadeIn()
