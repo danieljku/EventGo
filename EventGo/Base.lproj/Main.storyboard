@@ -285,7 +285,6 @@
                                 </state>
                                 <connections>
                                     <action selector="continueButtonAction:" destination="vGy-3Y-j84" eventType="touchUpInside" id="WXJ-Nc-6UU"/>
-                                    <segue destination="tnx-Yl-Cdn" kind="show" identifier="ContinueSegue" id="GgO-So-nyX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-Ml-F8B">
@@ -331,6 +330,7 @@
                         <outlet property="errorLabel" destination="pfH-Ml-F8B" id="L6c-2w-ak4"/>
                         <outlet property="firstNameField" destination="FdJ-Tf-8QN" id="clp-Pw-y8l"/>
                         <outlet property="lastNameField" destination="dMT-eV-Lau" id="ywb-O5-UYU"/>
+                        <segue destination="tnx-Yl-Cdn" kind="show" identifier="ContinueSegue" id="YzN-fZ-pto"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qb8-wv-Nhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -910,7 +910,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
                                 <rect key="frame" x="10" y="342" width="580" height="208"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
@@ -925,7 +925,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                                 <rect key="frame" x="10" y="565" width="580" height="30"/>
                                 <state key="normal" title="Going"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2pG-7d-ICZ" userLabel="Event Info Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2pG-7d-ICZ" userLabel="Event Info Stack View">
                                 <rect key="frame" x="10" y="249" width="211" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday, May 17, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHA-CO-HwQ">
@@ -937,10 +937,10 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80045797413793107" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-Ip-fFT" userLabel="Address Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-Ip-fFT" userLabel="Address Stack View">
                                         <rect key="frame" x="0.0" y="20" width="211" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH8-NO-6yJ" userLabel="Address Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH8-NO-6yJ" userLabel="Address Label">
                                                 <rect key="frame" x="0.0" y="0.0" width="211" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="3pr-Bw-JdW"/>
@@ -949,7 +949,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bXQ-Pi-Scy" userLabel="CityStateZip Stack View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bXQ-Pi-Scy" userLabel="CityStateZip Stack View">
                                                 <rect key="frame" x="0.0" y="20" width="211" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANb-P8-gjE">
@@ -966,7 +966,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                                                             </mask>
                                                         </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="California" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiH-bL-3DW">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiH-bL-3DW">
                                                         <rect key="frame" x="99" y="0.0" width="62" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="3bd-A9-PLv"/>
@@ -982,7 +982,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                                                             </mask>
                                                         </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="91404" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iln-tF-nzX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="91404" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iln-tF-nzX">
                                                         <rect key="frame" x="169" y="0.0" width="42" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -1053,7 +1053,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K8D-30-FWU"/>
-        <segue reference="qi5-IW-BeM"/>
-        <segue reference="WDd-3L-JlL"/>
+        <segue reference="gpb-hF-HlW"/>
+        <segue reference="wzn-Zv-6b2"/>
     </inferredMetricsTieBreakers>
 </document>
