@@ -192,5 +192,56 @@ class ServerHelper {
         return events
     }
     
+    // Create event
+    static var eventCreated: Bool!
+    static func createEvent(name: String!, street: String!, city: String!, state: String!, Zip: String!, startTime: String!, userId: String!, description: String!) {
+        eventCreated = nil
+        
+        // Set up the request
+        let str = String("http://curtastic.com/eventtogo/?action=addevent&name=" + name + "&street=" + street + "&city=" + city + "&state=" + state + "&zip=" + Zip + "&starttime=" + startTime + "&userid=" + userId + "&description=" + description)
+        let apiURL = NSURL(string: str)
+        let request = NSURLRequest(URL: apiURL!)
+        
+        // Create a task
+        let task = NSURLSession.sharedSession().dataTaskWithURL(request.URL!) {
+            (data, response, error) in
+            
+            if error == nil {
+                guard let data = data else {
+                    print("No data was returned by the request!")
+                    eventCreated = false
+                    return
+                }
+                
+                let parsedResult: AnyObject!
+                
+                do {
+                    // Serialize means converting object to streams of bytes
+                    print(data)
+                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                    
+                    print(parsedResult)
+                }
+                catch {
+                    print("Could not parse the data as JSON: '\(data)'")
+                    eventCreated = false
+                    return
+                }
+                
+                if let dictionary = parsedResult["message"] {
+                    print(dictionary)
+                    eventCreated = true
+                    return
+                }
+            }
+        }
+        
+        task.resume()
+        while(ServerHelper.userCreated == nil) {
+            //stall
+        }
+        return
+    }
+    
 
 }
