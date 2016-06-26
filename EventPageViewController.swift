@@ -1,4 +1,3 @@
-    eventNameLabel.text
 //
 //  EventPageViewController.swift
 //  EventGo
