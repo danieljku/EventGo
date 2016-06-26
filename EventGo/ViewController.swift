@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let apiURL = NSURL(string: "http://curtastic.com/eventtogo/?action=getevents")
+        /*let apiURL = NSURL(string: "http://curtastic.com/eventtogo/?action=getevents")
         
         let request = NSURLRequest(URL: apiURL!)
         
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             if error == nil {
                 
             }
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
