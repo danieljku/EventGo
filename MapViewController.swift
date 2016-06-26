@@ -129,7 +129,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                                 region.span.latitudeDelta /= 8.0
                                 
                                 pointAnnotation.title = "\(each["name"]!)"
-                                pointAnnotation.subtitle = "\(each["street"]!)"
+                                pointAnnotation.subtitle = "\(each["street"]!), \(each["city"]!), \(each["state"]!) \(each["zip"]!),  \(each["description"]!)"
                                 
                                 self.mapView.addAnnotation(pointAnnotation)
                                 self.mapView.centerCoordinate = coordinates
@@ -143,38 +143,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
         }
         task.resume()
-        
-        /*for address in addresses {
-            var location: String = address
-            var geocoder: CLGeocoder = CLGeocoder()
-            geocoder.geocodeAddressString(location,completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
-                if (placemarks?.count > 0) {
-                    var topResult: CLPlacemark = (placemarks?[0])!
-                    var placemark: MKPlacemark = MKPlacemark(placemark: topResult)
-                    var region: MKCoordinateRegion = self.mapView.region
-                    //region.center = placemark.region!.center
-                    //self.mapView.setRegion(region, animated: true)
-                    var coordinates:CLLocationCoordinate2D = topResult.location!.coordinate
-                    var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
-                    pointAnnotation.coordinate = coordinates
-                    region.span.longitudeDelta /= 8.0
-                    region.span.latitudeDelta /= 8.0
-                    
-                    pointAnnotation.title = "\(address)"
-                    pointAnnotation.subtitle = "Event name"
-                    
-                    
-                    self.mapView.addAnnotation(pointAnnotation)
-                    self.mapView.centerCoordinate = coordinates
-                    self.mapView.selectAnnotation(pointAnnotation, animated: true)
-                    self.mapView.setRegion(region, animated: true)
-                    region.span.longitudeDelta /= 8.0
-                    region.span.latitudeDelta /= 8.0
-                    self.mapView.setRegion(region, animated: true)
-                    //self.mapView.addAnnotation(placemark)
-                }
-            })
-        }*/
+
     }
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
