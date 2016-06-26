@@ -63,9 +63,11 @@ class ServerHelper {
         
         // Create a task
         let task = NSURLSession.sharedSession().dataTaskWithURL(request.URL!) {
+            
             (data, response, error) in
             
             if error == nil {
+                
                 guard let data = data else { print("No data was returned by the request!"); return }
                 
                 let parsedResult: AnyObject!
@@ -93,6 +95,8 @@ class ServerHelper {
                 }
             }
         }
+        
+        task.resume()
         
         return loggedIn
     }
