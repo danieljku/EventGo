@@ -248,7 +248,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func addImageButton(sender: AnyObject) {
         print("choose photo")
-        //pictureAddHelper!.showPhotoSourceSelection()
+        ServerHelper.createEvent(eventNameField.text, street: addressField.text, city: cityField.text, state: stateField.text, Zip: zipCodeField.text, startTime: "1466934686794", userId: "1", description: eventDescriptionField.text)
     }
     
     
