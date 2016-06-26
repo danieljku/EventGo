@@ -30,12 +30,15 @@ class SignUpViewController: UIViewController {
             else {
                 self.errorLabel.textColor = self.errorGreenColor
                 self.errorLabel.text = "Continuing on!"
-                SignUpContinuedViewController.continueFromSignUp(self.firstNameField.text!, lastName: self.lastNameField.text!)
             }
             
             // Start fade in
             self.errorLabel.fadeIn()
         })
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
     }
     
     //Calls this function when the tap is recognized.

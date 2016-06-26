@@ -39,9 +39,4 @@ class SignUpContinuedViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
     }
-    
-    static func continueFromSignUp(firstName: String, lastName: String) {
-        self.firstName = firstName
-        self.lastName = lastName
-    }
 }
