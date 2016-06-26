@@ -24,19 +24,24 @@ class EventPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
         eventNameLabel.font = UIFont.boldSystemFontOfSize(16.0)
         eventNameLabel.text = event.name
-        addressLabel.text = event.address
         
-        //Retrieve data from ViewController and insert into text fields of the labels
-//        eventNameLabel.text = eventPage!.eventName
-//        dateLabel.text = eventPage!.eventDate
-//        addressLabel.text = eventPage!.eventAddress
-//        stateLabel.text = eventPage!.eventState
-//        cityLabel.text = eventPage!.eventCity
-//        zipCodeLabel.text = String(eventPage!.eventZipCode)
-//        costLabel.text = "$" + String(eventPage!.eventCost)
-//        descriptionTextView.text = eventPage!.eventDescription
+        let subtitle = event.address
+        
+        let fullAddr = subtitle.characters.split{$0 == ","}.map(String.init)
+        addressLabel.text = fullAddr[0]
+        cityLabel.text = fullAddr[1].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        let stateZiparr = fullAddr[2]
+        let stateZip = stateZiparr.characters.split{$0 == " "}.map(String.init)
+        
+        stateLabel.text = stateZip[0]
+        zipCodeLabel.text = stateZip[1]
+        descriptionTextView.text = fullAddr[3].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
         print(event.name)
         
         

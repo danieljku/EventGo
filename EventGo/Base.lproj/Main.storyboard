@@ -189,7 +189,6 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGG-Eg-9FF">
                                 <rect key="frame" x="277" y="370" width="47" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.29411764705882354" green="0.69411764705882351" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -910,7 +909,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fJ-MEO">
                                 <rect key="frame" x="10" y="342" width="580" height="208"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">AngelHack, a female-owned, female-majority company, is the world’s largest and most diverse global hacker community, helping to drive open innovation of tech products, platforms and brands with extraordinary smarts, scale and speed.
@@ -1011,20 +1010,20 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="QJr-D7-bMh" secondAttribute="trailing" constant="10" id="17c-Jf-Iad"/>
                             <constraint firstItem="QJr-D7-bMh" firstAttribute="centerX" secondItem="kVp-Rp-wOv" secondAttribute="centerX" id="DBQ-hN-vMG"/>
-                            <constraint firstItem="DaT-fJ-MEO" firstAttribute="centerX" secondItem="kVp-Rp-wOv" secondAttribute="centerX" id="Pq7-GE-nKm"/>
+                            <constraint firstItem="DaT-fJ-MEO" firstAttribute="top" secondItem="2pG-7d-ICZ" secondAttribute="bottom" constant="13" id="Dex-ef-SXv"/>
+                            <constraint firstItem="DaT-fJ-MEO" firstAttribute="trailing" secondItem="ZX8-HK-Iqg" secondAttribute="trailing" id="OSn-vR-Se2"/>
                             <constraint firstItem="ZX8-HK-Iqg" firstAttribute="centerX" secondItem="kVp-Rp-wOv" secondAttribute="centerX" id="R14-8q-ylY"/>
-                            <constraint firstAttribute="trailing" secondItem="DaT-fJ-MEO" secondAttribute="trailing" constant="10" id="S8F-XQ-1iN"/>
                             <constraint firstItem="LML-zX-2jy" firstAttribute="top" secondItem="ZX8-HK-Iqg" secondAttribute="bottom" constant="5" id="TgO-z0-YJm"/>
                             <constraint firstItem="2pG-7d-ICZ" firstAttribute="top" secondItem="QJr-D7-bMh" secondAttribute="bottom" constant="7" id="UeZ-G7-5M0"/>
                             <constraint firstItem="IFv-tG-xFl" firstAttribute="top" secondItem="x9u-rG-ppz" secondAttribute="bottom" id="WXj-yW-v9h"/>
                             <constraint firstItem="2pG-7d-ICZ" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" constant="10" id="XTJ-sk-Tya"/>
+                            <constraint firstItem="DaT-fJ-MEO" firstAttribute="leading" secondItem="ZX8-HK-Iqg" secondAttribute="leading" id="Xwy-RB-d3x"/>
                             <constraint firstAttribute="trailing" secondItem="ZX8-HK-Iqg" secondAttribute="trailing" constant="10" id="Zxe-8e-jbb"/>
-                            <constraint firstItem="DaT-fJ-MEO" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" constant="10" id="erC-iG-Ewr"/>
                             <constraint firstItem="IFv-tG-xFl" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" id="g8c-r3-bjk"/>
                             <constraint firstAttribute="trailing" secondItem="IFv-tG-xFl" secondAttribute="trailing" id="jmI-fy-dZ0"/>
                             <constraint firstItem="QJr-D7-bMh" firstAttribute="top" secondItem="IFv-tG-xFl" secondAttribute="bottom" constant="10" id="mgb-9Z-Ak5"/>
-                            <constraint firstItem="LML-zX-2jy" firstAttribute="top" secondItem="DaT-fJ-MEO" secondAttribute="bottom" constant="50" id="sjW-Jn-0iJ"/>
                             <constraint firstItem="QJr-D7-bMh" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" constant="10" id="v3z-GR-218"/>
+                            <constraint firstItem="ZX8-HK-Iqg" firstAttribute="top" secondItem="DaT-fJ-MEO" secondAttribute="bottom" constant="15" id="wrl-nH-wjX"/>
                             <constraint firstItem="ZX8-HK-Iqg" firstAttribute="leading" secondItem="kVp-Rp-wOv" secondAttribute="leading" constant="10" id="x2O-VE-ce0"/>
                         </constraints>
                     </view>
@@ -1053,7 +1052,7 @@ Known as pioneers of global hackathons for more than four years, AngelHack’s m
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K8D-30-FWU"/>
-        <segue reference="gpb-hF-HlW"/>
+        <segue reference="qi5-IW-BeM"/>
         <segue reference="wzn-Zv-6b2"/>
     </inferredMetricsTieBreakers>
 </document>
