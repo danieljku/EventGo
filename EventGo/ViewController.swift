@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var eventNameField: UITextField!
     @IBOutlet weak var dateField: UITextField!
-    @IBOutlet weak var locationField: UITextField!
+    @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var costField: UITextField!
     @IBOutlet weak var eventDescriptionField: UITextView!
-
+    @IBOutlet weak var cityField: UITextField!
+    @IBOutlet weak var stateField: UITextField!
+    @IBOutlet weak var zipCodeField: UITextField!
     
     var eventList = Event()
 
@@ -54,7 +56,10 @@ class ViewController: UIViewController {
         
         event.eventName = eventNameField.text!
         event.eventDate = dateField.text!
-        event.eventLocation = locationField.text!
+        event.eventAddress = addressField.text!
+        event.eventCity = cityField.text!
+        event.eventState = stateField.text!
+        event.eventZipCode = zipCodeField.text!
         event.eventCost = costField.text!
         event.eventDescription = eventDescriptionField.text!
         

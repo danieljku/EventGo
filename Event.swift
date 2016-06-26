@@ -9,9 +9,12 @@
 import Foundation
 
 class Event{
-    var eventName = ""
+    var eventName = "HI"
     var eventDate = ""
-    var eventLocation = ""
+    var eventAddress = ""
+    var eventCity = ""
+    var eventState = ""
+    var eventZipCode = ""
     var eventCost = ""
     var eventDescription = ""
     
