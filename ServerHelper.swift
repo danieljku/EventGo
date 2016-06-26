@@ -207,6 +207,7 @@ class ServerHelper {
             (data, response, error) in
             
             if error == nil {
+                
                 guard let data = data else {
                     print("No data was returned by the request!")
                     eventCreated = false
