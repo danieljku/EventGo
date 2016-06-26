@@ -1,4 +1,4 @@
-    eventNameLabel.text
+//   eventNameLabel.text
 //
 //  EventPageViewController.swift
 //  EventGo
@@ -15,13 +15,19 @@ class EventPageViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    
+    var eventPage: Event?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        //self.eventNameLabel.text
+        self.eventNameLabel.text = eventPage!.eventName
+        self.dateLabel.text = eventPage!.eventDate
+        self.locationLabel.text = eventPage!.eventLocation
+        self.costLabel.text = eventPage!.eventCost
+        self.descriptionTextView.text = eventPage!.eventDescription
 
         
     }

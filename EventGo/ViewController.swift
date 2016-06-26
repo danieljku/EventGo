@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var eventDescriptionField: UITextView!
 
     
-    let event = Event()
+    var eventList = Event()
 
     
     override func viewDidLoad() {
@@ -42,17 +42,23 @@ class ViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let eventPageViewController = segue.destinationViewController as! EventPageViewController
         if segue.identifier == "EventPage"{
+            eventPageViewController.eventPage = eventList
      }
     }
     
     
     @IBAction func createEventButton(sender: AnyObject) {
+        let event = Event()
+        
         event.eventName = eventNameField.text!
         event.eventDate = dateField.text!
         event.eventLocation = locationField.text!
         event.eventCost = costField.text!
         event.eventDescription = eventDescriptionField.text!
+        
+        eventList = event
 
     }
     
