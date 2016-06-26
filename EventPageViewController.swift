@@ -23,6 +23,8 @@ class EventPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        eventNameLabel.font = UIFont.boldSystemFontOfSize(16.0)
 
         //Retrieve data from ViewController and insert into text fields of the labels
 //        eventNameLabel.text = eventPage!.eventName
