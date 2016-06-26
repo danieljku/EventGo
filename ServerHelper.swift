@@ -10,10 +10,64 @@ import Foundation
 
 class ServerHelper {
     
-    static var loading = false
-    
-    // For attempLogIn
+    // Attempt to log in
     static var userLoggedIn: Bool!
+    static func attemptLogIn(email: String!, password: String!) {
+        userLoggedIn = nil
+        
+        // If there's nothing in email or password, just return false, no need to check
+        if email == nil || email == "" || password == nil || password == "" {
+            userLoggedIn = false
+            return
+        }
+        
+        // Set up the request
+        let str = String("http://curtastic.com/eventtogo/?action=login&email=" + email + "&password=" + password)
+        let apiURL = NSURL(string: str)
+        let request = NSURLRequest(URL: apiURL!)
+        
+        // Create a task
+        let task = NSURLSession.sharedSession().dataTaskWithURL(request.URL!) {
+            (data, response, error) in
+            
+            if error == nil {
+                guard let data = data else {
+                    print("No data was returned by the request!")
+                    userLoggedIn = false
+                    return
+                }
+                
+                let parsedResult: AnyObject!
+                
+                do {
+                    // Serialize means converting object to streams of bytes
+                    print(data)
+                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                    
+                    print(parsedResult)
+                }
+                catch {
+                    print("Could not parse the data as JSON: '\(data)'")
+                    userLoggedIn = false
+                    return
+                }
+                
+                if let dictionary = parsedResult["user"] {
+                    print(dictionary)
+                    if dictionary == nil {
+                        userLoggedIn = false
+                    }
+                    else {
+                        userLoggedIn = true
+                    }
+                    return
+                }
+            }
+        }
+        
+        task.resume()
+        return
+    }
     
     static func retreiveEvents() {
         
@@ -55,62 +109,7 @@ class ServerHelper {
         task.resume()
     }
     
-    // Try to log in
-    static func attemptLogIn(email: String!, password: String!) {
-        
-        loading = true
-        
-        // If there's nothing in email or password, just return false, no need to check
-        if email == nil || email == "" || password == nil || password == "" {
-            loading = false
-            userLoggedIn = false
-            return
-        }
-        
-        // Set up the request
-        let str = String("http://curtastic.com/eventtogo/?action=login&email=" + email + "&password=" + password)
-        let apiURL = NSURL(string: str)
-        let request = NSURLRequest(URL: apiURL!)
-        
-        // Create a task
-        let task = NSURLSession.sharedSession().dataTaskWithURL(request.URL!) {
-            
-            (data, response, error) in
-            
-            if error == nil {
-                
-                guard let data = data else { print("No data was returned by the request!"); return }
-                
-                let parsedResult: AnyObject!
-                
-                do {
-                    // Serialize means converting object to streams of bytes
-                    print(data)
-                    parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-                    
-                    print(parsedResult)
-                }
-                catch {
-                    print("Could not parse the data as JSON: '\(data)'")
-                    return
-                }
-                
-                if let dictionary = parsedResult["user"] {
-                    print(dictionary)
-                    
-                    userLoggedIn = true
-                    loading = false
-                    
-                    return
-                }
-            }
-        }
-        
-        task.resume()
-        return
-    }
-    
-    static func createUser(email: String!, password: String!, firstName: String!, lastName: String!) {
+    /*static func createUser(email: String!, password: String!, firstName: String!, lastName: String!) {
         
         loading = true
         
@@ -157,5 +156,5 @@ class ServerHelper {
         
         task.resume()
         return
-    }
+    }*/
 }

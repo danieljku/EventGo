@@ -24,10 +24,10 @@ class SignInViewController: UIViewController {
             (finished: Bool) -> Void in
             
             // Check username and password
-            ServerHelper.attemptLogIn(self.usernameField.text, password: self.passwordField.text)
+            /*ServerHelper.attemptLogIn(self.usernameField.text, password: self.passwordField.text)
             while(ServerHelper.loading == true) {
                 
-                if(ServerHelper.userLoggedIn == false) {
+                if(ServerHelper.userLoggedIn != true) {
                     
                 }
                 else {
@@ -43,6 +43,21 @@ class SignInViewController: UIViewController {
                         self.errorLabel.text = "The username or password is incorrect."
                     }
                 }
+            }*/
+            
+            ServerHelper.attemptLogIn(self.usernameField.text, password: self.passwordField.text)
+            while(ServerHelper.userLoggedIn == nil) {
+                //stall
+            }
+            print(ServerHelper.userLoggedIn)
+            if(ServerHelper.userLoggedIn! == true) {
+                self.errorLabel.textColor = errorGreenColor
+                self.errorLabel.text = "Successfully signed in."
+                // MOVE ON TO WINNIE'S MAPS!
+            }
+            else {
+                self.errorLabel.textColor = errorRedColor
+                self.errorLabel.text = "The username or password is incorrect."
             }
             
             // Start fade in
