@@ -242,6 +242,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dateField.text = dateFormatter.stringFromDate(sender.date)
         
     }
+    @IBAction func createEventButton2(sender: AnyObject) {
+    }
     
     @IBAction func createEventButton(sender: AnyObject) {
         ServerHelper.createEvent(eventNameField.text, street: addressField.text, city: cityField.text, state: stateField.text, Zip: zipCodeField.text, startTime: "1466934686794", userId: "1", description: eventDescriptionField.text)
