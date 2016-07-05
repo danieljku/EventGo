@@ -242,6 +242,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dateField.text = dateFormatter.stringFromDate(sender.date)
         
     }
+    //GITHUB TEST COMMENT
     @IBAction func createEventButton2(sender: AnyObject) {
     }
     
